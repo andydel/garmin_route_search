@@ -122,4 +122,11 @@ RouteOrganiser/
 
 ## License
 
-This project is a route management application for Garmin Connect IQ widgets.
+This project is available under a dual license:
+
+- **Andy Delaney**: MIT License (commercial use allowed)
+- **All other users**: Creative Commons Attribution-NonCommercial 4.0 International License (non-commercial use only)
+
+For commercial licensing inquiries (non-Andy Delaney users), please contact Andy Delaney.
+
+See the [LICENSE](LICENSE) file for complete license terms.

@@ -1,0 +1,127 @@
+[ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/source/MyConnectMenuDelegate.mc"; @line = 1; @symbol_usingdef<0> = [Toybox,1,6,12]; @symbol_usingdef<1> = [WatchUi,1,13,20]; ]
+using Toybox.WatchUi;
+[ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/source/MyConnectMenuDelegate.mc"; @line = 2; @symbol_usingdef<0> = [Toybox,2,6,12]; @symbol_usingdef<1> = [System,2,13,19]; ]
+using Toybox.System;
+[ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/source/MyConnectMenuDelegate.mc"; @line = 3; @symbol_usingdef<0> = [Toybox,3,6,12]; @symbol_usingdef<1> = [Lang,3,13,17]; ]
+using Toybox.Lang;
+[ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/source/MyConnectMenuDelegate.mc"; @line = 5; @symbol_classdef = [MyConnectMenuDelegate,5,6,27]; @symbol_extends<0> = [WatchUi,5,36,43]; @symbol_extends<1> = [MenuInputDelegate,5,44,61]; ]
+class MyConnectMenuDelegate extends WatchUi.MenuInputDelegate {
+    [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/source/MyConnectMenuDelegate.mc"; @line = 5; ]
+    <init> {
+    }
+    [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/source/MyConnectMenuDelegate.mc"; @line = 5; ]
+    static
+    <init> {
+    }
+    [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/source/MyConnectMenuDelegate.mc"; @line = 7; @symbol_functiondef = [initialize,7,13,23]; ]
+    function initialize() as Void {
+_Users_andy_VSCode_GarminTest_TestGarmin_source_MyConnectMenuDelegate_mc_7_26_9_4_start:
+[ "/Users/andy/VSCode/GarminTest/TestGarmin/source/MyConnectMenuDelegate.mc" 8 8 ]
+        symbol [ MenuInputDelegate %tmp.2 8 8 25 ];
+        %tmp.2 = getv ? :MenuInputDelegate;
+        symbol [ initialize %tmp.3 8 26 36 ];
+        %tmp.3 = getv function %tmp.2 :initialize;
+        invoke %tmp.2 %tmp.3();
+_Users_andy_VSCode_GarminTest_TestGarmin_source_MyConnectMenuDelegate_mc_7_26_9_4_stop:
+    }
+    [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/source/MyConnectMenuDelegate.mc"; @line = 11; @symbol_functiondef = [onMenuItem,11,13,23]; @symbol_param<0> = [item,11,24,28]; @symbol_param<0>_type<0> = [Lang,11,32,36]; @symbol_param<0>_type<1> = [Symbol,11,37,43]; ]
+    function onMenuItem(item as Lang.Symbol) as Void {
+_Users_andy_VSCode_GarminTest_TestGarmin_source_MyConnectMenuDelegate_mc_11_53_26_4_start:
+[ "/Users/andy/VSCode/GarminTest/TestGarmin/source/MyConnectMenuDelegate.mc" 12 8 ]
+        %tmp.1 = lgetv %item;
+        symbol [ item %tmp.1 12 15 19 ];
+        push %tmp.1;
+        switch %tmp.1 @_Users_andy_VSCode_GarminTest_TestGarmin_source_MyConnectMenuDelegate_mc_12_8_25_8_switchStmtEnd;
+_Users_andy_VSCode_GarminTest_TestGarmin_source_MyConnectMenuDelegate_mc_12_8_25_8_switchStmtBegin:
+[ "/Users/andy/VSCode/GarminTest/TestGarmin/source/MyConnectMenuDelegate.mc" 13 12 ]
+        %tmp.2 = dup %tmp.1;
+        %tmp.4 = const :item_1;
+        symbol [ item_1 %tmp.4 13 18 24 const ];
+        %tmp.5 = getv function %tmp.2 :equals;
+        %tmp.6 = invoke %tmp.2 %tmp.5 (%tmp.4);
+        bt %tmp.6 @_Users_andy_VSCode_GarminTest_TestGarmin_source_MyConnectMenuDelegate_mc_13_12_16_21_switchCase;
+[ "/Users/andy/VSCode/GarminTest/TestGarmin/source/MyConnectMenuDelegate.mc" 17 12 ]
+        %tmp.7 = dup %tmp.1;
+        %tmp.9 = const :item_2;
+        symbol [ item_2 %tmp.9 17 18 24 const ];
+        %tmp.10 = getv function %tmp.7 :equals;
+        %tmp.11 = invoke %tmp.7 %tmp.10 (%tmp.9);
+        bt %tmp.11 @_Users_andy_VSCode_GarminTest_TestGarmin_source_MyConnectMenuDelegate_mc_17_12_20_21_switchCase;
+[ "/Users/andy/VSCode/GarminTest/TestGarmin/source/MyConnectMenuDelegate.mc" 21 12 ]
+        %tmp.12 = dup %tmp.1;
+        %tmp.14 = const :settings;
+        symbol [ settings %tmp.14 21 18 26 const ];
+        %tmp.15 = getv function %tmp.12 :equals;
+        %tmp.16 = invoke %tmp.12 %tmp.15 (%tmp.14);
+        bt %tmp.16 @_Users_andy_VSCode_GarminTest_TestGarmin_source_MyConnectMenuDelegate_mc_21_12_24_21_switchCase;
+_Users_andy_VSCode_GarminTest_TestGarmin_source_MyConnectMenuDelegate_mc_12_8_25_8_switchStmtDefault:
+        goto @_Users_andy_VSCode_GarminTest_TestGarmin_source_MyConnectMenuDelegate_mc_12_8_25_8_defaultCodeBegin;
+_Users_andy_VSCode_GarminTest_TestGarmin_source_MyConnectMenuDelegate_mc_13_12_16_21_switchCase:
+[ "/Users/andy/VSCode/GarminTest/TestGarmin/source/MyConnectMenuDelegate.mc" 14 16 ]
+        symbol [ System %tmp.17 14 16 22 ];
+        %tmp.17 = getm $.Toybox.System;
+        symbol [ println %tmp.18 14 23 30 ];
+        %tmp.18 = getv function %tmp.17 :println;
+        %tmp.19 = "Menu Item 1 selected";
+        invoke %tmp.17 %tmp.18(%tmp.19);
+[ "/Users/andy/VSCode/GarminTest/TestGarmin/source/MyConnectMenuDelegate.mc" 15 16 ]
+        symbol [ WatchUi %tmp.20 15 16 23 ];
+        %tmp.20 = getm $.Toybox.WatchUi;
+        symbol [ popView %tmp.21 15 24 31 ];
+        %tmp.21 = getv function %tmp.20 :popView;
+        symbol [ WatchUi %tmp.22 15 32 39 ];
+        %tmp.22 = getm $.Toybox.WatchUi;
+        symbol [ SLIDE_DOWN %tmp.23 15 40 50 ];
+        %tmp.23 = getv %tmp.22 :SLIDE_DOWN;
+        invoke %tmp.20 %tmp.21(%tmp.23);
+[ "/Users/andy/VSCode/GarminTest/TestGarmin/source/MyConnectMenuDelegate.mc" 16 16 ]
+        goto break @_Users_andy_VSCode_GarminTest_TestGarmin_source_MyConnectMenuDelegate_mc_12_8_25_8_switchStmtEnd;
+_Users_andy_VSCode_GarminTest_TestGarmin_source_MyConnectMenuDelegate_mc_17_12_20_21_switchCase:
+[ "/Users/andy/VSCode/GarminTest/TestGarmin/source/MyConnectMenuDelegate.mc" 18 16 ]
+        symbol [ System %tmp.24 18 16 22 ];
+        %tmp.24 = getm $.Toybox.System;
+        symbol [ println %tmp.25 18 23 30 ];
+        %tmp.25 = getv function %tmp.24 :println;
+        %tmp.26 = "Menu Item 2 selected";
+        invoke %tmp.24 %tmp.25(%tmp.26);
+[ "/Users/andy/VSCode/GarminTest/TestGarmin/source/MyConnectMenuDelegate.mc" 19 16 ]
+        symbol [ WatchUi %tmp.27 19 16 23 ];
+        %tmp.27 = getm $.Toybox.WatchUi;
+        symbol [ popView %tmp.28 19 24 31 ];
+        %tmp.28 = getv function %tmp.27 :popView;
+        symbol [ WatchUi %tmp.29 19 32 39 ];
+        %tmp.29 = getm $.Toybox.WatchUi;
+        symbol [ SLIDE_DOWN %tmp.30 19 40 50 ];
+        %tmp.30 = getv %tmp.29 :SLIDE_DOWN;
+        invoke %tmp.27 %tmp.28(%tmp.30);
+[ "/Users/andy/VSCode/GarminTest/TestGarmin/source/MyConnectMenuDelegate.mc" 20 16 ]
+        goto break @_Users_andy_VSCode_GarminTest_TestGarmin_source_MyConnectMenuDelegate_mc_12_8_25_8_switchStmtEnd;
+_Users_andy_VSCode_GarminTest_TestGarmin_source_MyConnectMenuDelegate_mc_21_12_24_21_switchCase:
+[ "/Users/andy/VSCode/GarminTest/TestGarmin/source/MyConnectMenuDelegate.mc" 22 16 ]
+        symbol [ System %tmp.31 22 16 22 ];
+        %tmp.31 = getm $.Toybox.System;
+        symbol [ println %tmp.32 22 23 30 ];
+        %tmp.32 = getv function %tmp.31 :println;
+        %tmp.33 = "Settings selected";
+        invoke %tmp.31 %tmp.32(%tmp.33);
+[ "/Users/andy/VSCode/GarminTest/TestGarmin/source/MyConnectMenuDelegate.mc" 23 16 ]
+        symbol [ WatchUi %tmp.34 23 16 23 ];
+        %tmp.34 = getm $.Toybox.WatchUi;
+        symbol [ popView %tmp.35 23 24 31 ];
+        %tmp.35 = getv function %tmp.34 :popView;
+        symbol [ WatchUi %tmp.36 23 32 39 ];
+        %tmp.36 = getm $.Toybox.WatchUi;
+        symbol [ SLIDE_DOWN %tmp.37 23 40 50 ];
+        %tmp.37 = getv %tmp.36 :SLIDE_DOWN;
+        invoke %tmp.34 %tmp.35(%tmp.37);
+[ "/Users/andy/VSCode/GarminTest/TestGarmin/source/MyConnectMenuDelegate.mc" 24 16 ]
+        goto break @_Users_andy_VSCode_GarminTest_TestGarmin_source_MyConnectMenuDelegate_mc_12_8_25_8_switchStmtEnd;
+_Users_andy_VSCode_GarminTest_TestGarmin_source_MyConnectMenuDelegate_mc_12_8_25_8_defaultCodeBegin:
+_Users_andy_VSCode_GarminTest_TestGarmin_source_MyConnectMenuDelegate_mc_12_8_25_8_switchStmtEnd:
+        pop;
+_Users_andy_VSCode_GarminTest_TestGarmin_source_MyConnectMenuDelegate_mc_11_53_26_4_stop:
+    }
+}
+[ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/source/MyConnectMenuDelegate.mc"; @line = 1; ]
+<init> {
+}

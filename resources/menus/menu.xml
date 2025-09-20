@@ -1,0 +1,5 @@
+<menu id="MainMenu">
+    <menu-item id="item_1" label="@Strings.MenuItem1"/>
+    <menu-item id="item_2" label="@Strings.MenuItem2"/>
+    <menu-item id="settings" label="@Strings.Settings"/>
+</menu>

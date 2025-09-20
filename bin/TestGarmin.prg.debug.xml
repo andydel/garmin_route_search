@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<debugInfo>
+    <manifest filename="/Users/andy/VSCode/GarminTest/TestGarmin/manifest.xml"/>
+    <pcToLineNum>
+        <entry filename="/Users/andy/VSCode/GarminTest/TestGarmin/source/MyConnectApp.mc" id="1" lineNum="25" parent="globals" pc="268435460" symbol="getApp"/>
+        <entry filename="/Users/andy/VSCode/GarminTest/TestGarmin/source/MyConnectApp.mc" id="1" lineNum="26" parent="globals" pc="268435470" symbol="getApp"/>
+        <entry filename="/Users/andy/VSCode/GarminTest/TestGarmin/source/MyConnectDelegate.mc" id="2" lineNum="5" parent="globals/MyConnectDelegate" pc="268435481" symbol="&lt;init&gt;"/>
+        <entry filename="/Users/andy/VSCode/GarminTest/TestGarmin/source/MyConnectMenuDelegate.mc" id="3" lineNum="5" parent="globals/MyConnectMenuDelegate" pc="268435493" symbol="&lt;init&gt;"/>
+        <entry filename="/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen" id="4" lineNum="7" parent="globals/Rez" pc="268435505" symbol="&lt;init&gt;"/>
+        <entry filename="/Users/andy/VSCode/GarminTest/TestGarmin/source/MyConnectApp.mc" id="5" lineNum="5" parent="globals/MyConnectApp" pc="268435525" symbol="&lt;init&gt;"/>
+        <entry filename="/Users/andy/VSCode/GarminTest/TestGarmin/source/MyConnectView.mc" id="6" lineNum="6" parent="globals/MyConnectView" pc="268435537" symbol="&lt;init&gt;"/>
+        <entry filename="/Users/andy/VSCode/GarminTest/TestGarmin/source/MyConnectDelegate.mc" id="7" lineNum="22" parent="globals/MyConnectDelegate" pc="268435549" symbol="onBack"/>
+        <entry filename="/Users/andy/VSCode/GarminTest/TestGarmin/source/MyConnectDelegate.mc" id="7" lineNum="24" parent="globals/MyConnectDelegate" pc="268435551" symbol="onBack"/>
+        <entry filename="/Users/andy/VSCode/GarminTest/TestGarmin/source/MyConnectDelegate.mc" id="7" lineNum="25" parent="globals/MyConnectDelegate" pc="268435562" symbol="onBack"/>
+        <entry filename="/Users/andy/VSCode/GarminTest/TestGarmin/source/MyConnectDelegate.mc" id="8" lineNum="11" parent="globals/MyConnectDelegate" pc="268435564" symbol="onMenu"/>
+        <entry filename="/Users/andy/VSCode/GarminTest/TestGarmin/source/MyConnectDelegate.mc" id="8" lineNum="12" parent="globals/MyConnectDelegate" pc="268435566" symbol="onMenu"/>
+        <entry filename="/Users/andy/VSCode/GarminTest/TestGarmin/source/MyConnectDelegate.mc" id="8" lineNum="13" parent="globals/MyConnectDelegate" pc="268435631" symbol="onMenu"/>
+        <entry filename="/Users/andy/VSCode/GarminTest/TestGarmin/source/MyConnectDelegate.mc" id="9" lineNum="7" parent="globals/MyConnectDelegate" pc="268435633" symbol="initialize"/>
+        <entry filename="/Users/andy/VSCode/GarminTest/TestGarmin/source/MyConnectDelegate.mc" id="9" lineNum="8" parent="globals/MyConnectDelegate" pc="268435635" symbol="initialize"/>
+        <entry filename="/Users/andy/VSCode/GarminTest/TestGarmin/source/MyConnectDelegate.mc" id="10" lineNum="16" parent="globals/MyConnectDelegate" pc="268435648" symbol="onSelect"/>
+        <entry filename="/Users/andy/VSCode/GarminTest/TestGarmin/source/MyConnectDelegate.mc" id="10" lineNum="18" parent="globals/MyConnectDelegate" pc="268435650" symbol="onSelect"/>
+        <entry filename="/Users/andy/VSCode/GarminTest/TestGarmin/source/MyConnectDelegate.mc" id="10" lineNum="19" parent="globals/MyConnectDelegate" pc="268435668" symbol="onSelect"/>
+        <entry filename="/Users/andy/VSCode/GarminTest/TestGarmin/source/MyConnectMenuDelegate.mc" id="11" lineNum="11" parent="globals/MyConnectMenuDelegate" pc="268435670" symbol="onMenuItem"/>
+        <entry filename="/Users/andy/VSCode/GarminTest/TestGarmin/source/MyConnectMenuDelegate.mc" id="11" lineNum="12" parent="globals/MyConnectMenuDelegate" pc="268435672" symbol="onMenuItem"/>
+        <entry filename="/Users/andy/VSCode/GarminTest/TestGarmin/source/MyConnectMenuDelegate.mc" id="11" lineNum="13" parent="globals/MyConnectMenuDelegate" pc="268435674" symbol="onMenuItem"/>
+        <entry filename="/Users/andy/VSCode/GarminTest/TestGarmin/source/MyConnectMenuDelegate.mc" id="11" lineNum="17" parent="globals/MyConnectMenuDelegate" pc="268435693" symbol="onMenuItem"/>
+        <entry filename="/Users/andy/VSCode/GarminTest/TestGarmin/source/MyConnectMenuDelegate.mc" id="11" lineNum="21" parent="globals/MyConnectMenuDelegate" pc="268435712" symbol="onMenuItem"/>
+        <entry filename="/Users/andy/VSCode/GarminTest/TestGarmin/source/MyConnectMenuDelegate.mc" id="11" lineNum="14" parent="globals/MyConnectMenuDelegate" pc="268435734" symbol="onMenuItem"/>
+        <entry filename="/Users/andy/VSCode/GarminTest/TestGarmin/source/MyConnectMenuDelegate.mc" id="11" lineNum="15" parent="globals/MyConnectMenuDelegate" pc="268435752" symbol="onMenuItem"/>
+        <entry filename="/Users/andy/VSCode/GarminTest/TestGarmin/source/MyConnectMenuDelegate.mc" id="11" lineNum="16" parent="globals/MyConnectMenuDelegate" pc="268435767" symbol="onMenuItem"/>
+        <entry filename="/Users/andy/VSCode/GarminTest/TestGarmin/source/MyConnectMenuDelegate.mc" id="11" lineNum="18" parent="globals/MyConnectMenuDelegate" pc="268435770" symbol="onMenuItem"/>
+        <entry filename="/Users/andy/VSCode/GarminTest/TestGarmin/source/MyConnectMenuDelegate.mc" id="11" lineNum="19" parent="globals/MyConnectMenuDelegate" pc="268435788" symbol="onMenuItem"/>
+        <entry filename="/Users/andy/VSCode/GarminTest/TestGarmin/source/MyConnectMenuDelegate.mc" id="11" lineNum="20" parent="globals/MyConnectMenuDelegate" pc="268435803" symbol="onMenuItem"/>
+        <entry filename="/Users/andy/VSCode/GarminTest/TestGarmin/source/MyConnectMenuDelegate.mc" id="11" lineNum="22" parent="globals/MyConnectMenuDelegate" pc="268435806" symbol="onMenuItem"/>
+        <entry filename="/Users/andy/VSCode/GarminTest/TestGarmin/source/MyConnectMenuDelegate.mc" id="11" lineNum="23" parent="globals/MyConnectMenuDelegate" pc="268435824" symbol="onMenuItem"/>
+        <entry filename="/Users/andy/VSCode/GarminTest/TestGarmin/source/MyConnectMenuDelegate.mc" id="11" lineNum="24" parent="globals/MyConnectMenuDelegate" pc="268435839" symbol="onMenuItem"/>
+        <entry filename="/Users/andy/VSCode/GarminTest/TestGarmin/source/MyConnectMenuDelegate.mc" id="12" lineNum="7" parent="globals/MyConnectMenuDelegate" pc="268435844" symbol="initialize"/>
+        <entry filename="/Users/andy/VSCode/GarminTest/TestGarmin/source/MyConnectMenuDelegate.mc" id="12" lineNum="8" parent="globals/MyConnectMenuDelegate" pc="268435846" symbol="initialize"/>
+        <entry filename="/Users/andy/VSCode/GarminTest/TestGarmin/source/MyConnectApp.mc" id="13" lineNum="12" parent="globals/MyConnectApp" pc="268435859" symbol="onStart"/>
+        <entry filename="/Users/andy/VSCode/GarminTest/TestGarmin/source/MyConnectApp.mc" id="14" lineNum="20" parent="globals/MyConnectApp" pc="268435862" symbol="getInitialView"/>
+        <entry filename="/Users/andy/VSCode/GarminTest/TestGarmin/source/MyConnectApp.mc" id="14" lineNum="21" parent="globals/MyConnectApp" pc="268435864" symbol="getInitialView"/>
+        <entry filename="/Users/andy/VSCode/GarminTest/TestGarmin/source/MyConnectApp.mc" id="15" lineNum="7" parent="globals/MyConnectApp" pc="268435911" symbol="initialize"/>
+        <entry filename="/Users/andy/VSCode/GarminTest/TestGarmin/source/MyConnectApp.mc" id="15" lineNum="8" parent="globals/MyConnectApp" pc="268435913" symbol="initialize"/>
+        <entry filename="/Users/andy/VSCode/GarminTest/TestGarmin/source/MyConnectApp.mc" id="16" lineNum="16" parent="globals/MyConnectApp" pc="268435926" symbol="onStop"/>
+        <entry filename="/Users/andy/VSCode/GarminTest/TestGarmin/source/MyConnectView.mc" id="18" lineNum="13" parent="globals/MyConnectView" pc="268435929" symbol="onLayout"/>
+        <entry filename="/Users/andy/VSCode/GarminTest/TestGarmin/source/MyConnectView.mc" id="18" lineNum="14" parent="globals/MyConnectView" pc="268435931" symbol="onLayout"/>
+        <entry filename="/Users/andy/VSCode/GarminTest/TestGarmin/source/MyConnectView.mc" id="19" lineNum="8" parent="globals/MyConnectView" pc="268435965" symbol="initialize"/>
+        <entry filename="/Users/andy/VSCode/GarminTest/TestGarmin/source/MyConnectView.mc" id="19" lineNum="9" parent="globals/MyConnectView" pc="268435967" symbol="initialize"/>
+        <entry filename="/Users/andy/VSCode/GarminTest/TestGarmin/source/MyConnectView.mc" id="21" lineNum="22" parent="globals/MyConnectView" pc="268435980" symbol="onUpdate"/>
+        <entry filename="/Users/andy/VSCode/GarminTest/TestGarmin/source/MyConnectView.mc" id="21" lineNum="24" parent="globals/MyConnectView" pc="268435983" symbol="onUpdate"/>
+        <entry filename="/Users/andy/VSCode/GarminTest/TestGarmin/source/MyConnectView.mc" id="21" lineNum="25" parent="globals/MyConnectView" pc="268435995" symbol="onUpdate"/>
+        <entry filename="/Users/andy/VSCode/GarminTest/TestGarmin/source/MyConnectView.mc" id="21" lineNum="28" parent="globals/MyConnectView" pc="268436049" symbol="onUpdate"/>
+        <entry filename="/Users/andy/VSCode/GarminTest/TestGarmin/source/MyConnectView.mc" id="21" lineNum="29" parent="globals/MyConnectView" pc="268436061" symbol="onUpdate"/>
+        <entry filename="/Users/andy/VSCode/GarminTest/TestGarmin/source/MyConnectView.mc" id="21" lineNum="32" parent="globals/MyConnectView" pc="268436069" symbol="onUpdate"/>
+        <entry filename="/Users/andy/VSCode/GarminTest/TestGarmin/source/MyConnectView.mc" id="21" lineNum="33" parent="globals/MyConnectView" pc="268436086" symbol="onUpdate"/>
+        <entry filename="/Users/andy/VSCode/GarminTest/TestGarmin/source/MyConnectView.mc" id="21" lineNum="42" parent="globals/MyConnectView" pc="268436128" symbol="onUpdate"/>
+        <entry filename="/Users/andy/VSCode/GarminTest/TestGarmin/source/MyConnectView.mc" id="21" lineNum="51" parent="globals/MyConnectView" pc="268436167" symbol="onUpdate"/>
+        <entry filename="/Users/andy/VSCode/GarminTest/TestGarmin/source/MyConnectView.mc" id="21" lineNum="60" parent="globals/MyConnectView" pc="268436206" symbol="onUpdate"/>
+        <entry filename="/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen" id="22" lineNum="13" parent="globals/Rez/Layouts" pc="268436223" symbol="MainLayout"/>
+        <entry filename="/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen" id="22" lineNum="14" parent="globals/Rez/Layouts" pc="268436234" symbol="MainLayout"/>
+        <entry filename="/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen" id="22" lineNum="16" parent="globals/Rez/Layouts" pc="268436334" symbol="MainLayout"/>
+        <entry filename="/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen" id="23" lineNum="21" parent="globals/Rez/Menus/MainMenu" pc="268436344" symbol="&lt;init&gt;"/>
+        <entry filename="/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen" id="24" lineNum="22" parent="globals/Rez/Menus/MainMenu" pc="268436356" symbol="initialize"/>
+        <entry filename="/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen" id="24" lineNum="23" parent="globals/Rez/Menus/MainMenu" pc="268436358" symbol="initialize"/>
+        <entry filename="/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen" id="24" lineNum="24" parent="globals/Rez/Menus/MainMenu" pc="268436370" symbol="initialize"/>
+        <entry filename="/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen" id="24" lineNum="25" parent="globals/Rez/Menus/MainMenu" pc="268436415" symbol="initialize"/>
+        <entry filename="/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen" id="24" lineNum="26" parent="globals/Rez/Menus/MainMenu" pc="268436460" symbol="initialize"/>
+    </pcToLineNum>
+    <symbolTable>
+        <entry id="8388639" module="true" symbol="Graphics"/>
+        <entry field="true" id="18" symbol="MenuItem2"/>
+        <entry field="true" id="17" symbol="MenuItem1"/>
+        <entry id="8389346" symbol="text"/>
+        <entry id="8388632" method="true" symbol="&lt;init&gt;"/>
+        <entry id="5" module="true" symbol="globals/Rez/Menus"/>
+        <entry id="14" method="true" symbol="MainLayout"/>
+        <entry id="7" object="true" symbol="MyConnectApp"/>
+        <entry field="true" id="8388611" module="true" symbol="Toybox"/>
+        <entry field="true" id="16" symbol="AppName"/>
+        <entry id="6" module="true" symbol="globals/Rez/Strings"/>
+        <entry id="8389080" method="true" symbol="onMenu"/>
+        <entry id="8388648" module="true" symbol="WatchUi"/>
+        <entry id="8389081" method="true" symbol="onBack"/>
+        <entry id="2" module="true" symbol="globals/Rez"/>
+        <entry id="9" object="true" symbol="MyConnectMenuDelegate"/>
+        <entry id="8389124" method="true" symbol="onUpdate"/>
+        <entry field="true" id="8389065" symbol="locY"/>
+        <entry field="true" id="8389064" symbol="locX"/>
+        <entry id="10" object="true" symbol="MyConnectView"/>
+        <entry id="8388771" module="true" object="true" symbol="Drawables"/>
+        <entry id="8389348" symbol="font"/>
+        <entry id="20" symbol="item_2"/>
+        <entry id="19" symbol="item_1"/>
+        <entry id="12" module="true" symbol="Menus"/>
+        <entry id="8389275" method="true" symbol="getApp"/>
+        <entry id="4" module="true" symbol="globals/Rez/Layouts"/>
+        <entry id="8389122" method="true" symbol="onLayout"/>
+        <entry id="8" object="true" symbol="MyConnectDelegate"/>
+        <entry id="3" module="true" symbol="globals/Rez/Drawables"/>
+        <entry id="15" object="true" symbol="MainMenu"/>
+        <entry field="true" id="8392335" object="true" symbol="Settings"/>
+        <entry id="8388644" module="true" symbol="System"/>
+        <entry id="8389619" method="true" symbol="onSelect"/>
+        <entry id="8388769" module="true" object="true" symbol="Rez"/>
+        <entry id="8388640" module="true" symbol="Lang"/>
+        <entry field="true" id="13" symbol="LauncherIcon"/>
+        <entry id="8388610" symbol="statics"/>
+        <entry id="8389123" method="true" symbol="onShow"/>
+        <entry id="8389350" module="true" symbol="globals"/>
+        <entry id="8388770" module="true" object="true" symbol="Strings"/>
+        <entry id="8388702" method="true" symbol="initialize"/>
+        <entry id="8389279" method="true" symbol="onStart"/>
+        <entry id="21" symbol="settings"/>
+        <entry id="8389280" method="true" symbol="getInitialView"/>
+        <entry id="8389281" method="true" symbol="onStop"/>
+        <entry id="8389109" method="true" symbol="onMenuItem"/>
+        <entry field="true" id="8389347" symbol="color"/>
+        <entry id="11" module="true" symbol="Layouts"/>
+        <entry id="8389125" method="true" symbol="onHide"/>
+        <entry id="8388635" module="true" symbol="Application"/>
+    </symbolTable>
+    <localVars>
+        <entry arg="true" endPc="268435843" name="item" stackId="1" startPc="268435670"/>
+        <entry arg="true" endPc="268435964" name="dc" stackId="1" startPc="268435929"/>
+        <entry arg="true" endPc="268436222" name="dc" stackId="1" startPc="268435980"/>
+        <entry endPc="268436221" name="clockTime" stackId="2" startPc="268435983"/>
+        <entry endPc="268436221" name="timeString" stackId="3" startPc="268435983"/>
+        <entry arg="true" endPc="268436343" name="dc" stackId="1" startPc="268436223"/>
+        <entry endPc="268436343" name="rez_cmp_local_text_1193959466" stackId="2" startPc="268436234"/>
+    </localVars>
+    <deviceInfo deviceVersion="8fc30743a4191ec19bcafa28e3ffcc2b5a958a17" partNumber="006-B4062-00"/>
+    <annotations>
+        <annotationEntry annotation="initialized" class="Drawables" module="globals/Rez" symbol="LauncherIcon"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="MenuItem2"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="MenuItem1"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="AppName"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="Settings"/>
+    </annotations>
+    <dataEntryOffsetMappings>
+        <dataEntry label="globals" offset="67" parentId="" symbolId="globals" type="module"/>
+        <dataEntry label="globals/MyConnectDelegate" offset="152" parentId="globals" symbolId="MyConnectDelegate" type="class"/>
+        <dataEntry label="globals/MyConnectMenuDelegate" offset="223" parentId="globals" symbolId="MyConnectMenuDelegate" type="class"/>
+        <dataEntry label="globals/Rez" offset="276" parentId="globals" symbolId="Rez" type="module"/>
+        <dataEntry label="globals/MyConnectApp" offset="338" parentId="globals" symbolId="MyConnectApp" type="class"/>
+        <dataEntry label="globals/MyConnectView" offset="409" parentId="globals" symbolId="MyConnectView" type="class"/>
+        <dataEntry label="globals/Rez/Drawables" offset="489" parentId="Rez" symbolId="Drawables" type="module"/>
+        <dataEntry label="globals/Rez/Layouts" offset="524" parentId="Rez" symbolId="Layouts" type="module"/>
+        <dataEntry label="globals/Rez/Menus" offset="559" parentId="Rez" symbolId="Menus" type="module"/>
+        <dataEntry label="globals/Rez/Strings" offset="594" parentId="Rez" symbolId="Strings" type="module"/>
+        <dataEntry label="globals/Rez/Menus/MainMenu" offset="656" parentId="Menus" symbolId="MainMenu" type="class"/>
+    </dataEntryOffsetMappings>
+    <functions>
+        <functionEntry accessMode="public" endPc="268435480" name="getApp" startPc="268435460">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435492" name="&lt;init&gt;" parent="MyConnectDelegate" startPc="268435481">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435504" name="&lt;init&gt;" parent="MyConnectMenuDelegate" startPc="268435493">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435524" name="&lt;init&gt;" parent="Rez" startPc="268435505">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435536" name="&lt;init&gt;" parent="MyConnectApp" startPc="268435525">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435548" name="&lt;init&gt;" parent="MyConnectView" startPc="268435537">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435563" name="onBack" parent="MyConnectDelegate" startPc="268435549">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435632" name="onMenu" parent="MyConnectDelegate" startPc="268435564">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435647" name="initialize" parent="MyConnectDelegate" startPc="268435633">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435669" name="onSelect" parent="MyConnectDelegate" startPc="268435648">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435843" name="onMenuItem" parent="MyConnectMenuDelegate" startPc="268435670">
+            <param id="item"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435858" name="initialize" parent="MyConnectMenuDelegate" startPc="268435844">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="&lt;init&gt;" parent="Drawables">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="&lt;init&gt;" parent="Layouts">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="&lt;init&gt;" parent="Menus">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="&lt;init&gt;" parent="Strings">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435861" name="onStart" parent="MyConnectApp" startPc="268435859">
+            <param id="state"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435910" name="getInitialView" parent="MyConnectApp" startPc="268435862">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435925" name="initialize" parent="MyConnectApp" startPc="268435911">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435928" name="onStop" parent="MyConnectApp" startPc="268435926">
+            <param id="state"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="onShow" parent="MyConnectView">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435964" name="onLayout" parent="MyConnectView" startPc="268435929">
+            <param id="dc"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435979" name="initialize" parent="MyConnectView" startPc="268435965">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="onHide" parent="MyConnectView">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268436222" name="onUpdate" parent="MyConnectView" startPc="268435980">
+            <param id="dc"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268436343" name="MainLayout" parent="Layouts" startPc="268436223">
+            <param id="dc"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268436355" name="&lt;init&gt;" parent="MainMenu" startPc="268436344">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268436505" name="initialize" parent="MainMenu" startPc="268436356">
+            <documentation/>
+        </functionEntry>
+    </functions>
+</debugInfo>

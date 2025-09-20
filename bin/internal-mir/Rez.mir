@@ -1,0 +1,1650 @@
+[ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 1; @symbol_importdef<0> = [Toybox,1,7,13]; @symbol_importdef<1> = [Lang,1,14,18]; ]
+import Toybox.Lang;
+[ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 2; @symbol_usingdef<0> = [Toybox,2,6,12]; @symbol_usingdef<1> = [WatchUi,2,13,20]; ]
+using Toybox.WatchUi;
+[ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 3; @symbol_usingdef<0> = [Toybox,3,6,12]; @symbol_usingdef<1> = [WatchUi,3,13,20]; @symbol_usingAlias = [Ui,3,24,26]; ]
+using Toybox.WatchUi as :Ui;
+[ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 4; @symbol_usingdef<0> = [Toybox,4,6,12]; @symbol_usingdef<1> = [Graphics,4,13,21]; ]
+using Toybox.Graphics;
+[ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 5; @symbol_usingdef<0> = [Toybox,5,6,12]; @symbol_usingdef<1> = [Graphics,5,13,21]; @symbol_usingAlias = [Gfx,5,25,28]; ]
+using Toybox.Graphics as :Gfx;
+[ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 7; @symbol_moduledef = [Rez,7,7,10]; ]
+module Rez {
+    [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 7; ]
+    <init> {
+    }
+    [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 8; @symbol_moduledef = [Drawables,8,11,20]; ]
+    module Drawables {
+        [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 8; ]
+        <init> {
+        }
+        [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 9; @position = 27; initialized = true; @symbol_vardef = [LauncherIcon,9,27,39]; @symbol_type<0> = [ResourceId,9,43,53]; ]
+        var LauncherIcon as ResourceId;
+    }
+    [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 12; @symbol_moduledef = [Layouts,12,11,18]; ]
+    module Layouts {
+        [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 12; ]
+        <init> {
+        }
+        [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 13; @symbol_functiondef = [MainLayout,13,17,27]; @symbol_param<0> = [dc,13,28,30]; @symbol_param<0>_type<0> = [Graphics,13,34,42]; @symbol_param<0>_type<1> = [Dc,13,43,45]; @symbol_return<0> = [Array,13,50,55]; @symbol_return<1> = [WatchUi,13,56,63]; @symbol_return<2> = [Drawable,13,64,72]; ]
+        function MainLayout(dc as Graphics.Dc) as Array<WatchUi.Drawable> {
+_Users_andy_VSCode_GarminTest_TestGarmin_bin_gen_006_B4062_00_source_Rez_mcgen_13_74_17_8_start:
+[ "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen" 14 12 ]
+            [ "_Users_andy_VSCode_GarminTest_TestGarmin_bin_gen_006_B4062_00_source_Rez_mcgen_13_74_17_8_start" "_Users_andy_VSCode_GarminTest_TestGarmin_bin_gen_006_B4062_00_source_Rez_mcgen_13_74_17_8_stop" ]
+            %rez_cmp_local_text_1193959466.1 = local;
+            symbol [ rez_cmp_local_text_1193959466 %rez_cmp_local_text_1193959466.1 14 16 45 ];
+            symbol [ WatchUi %tmp.3 14 52 59 ];
+            %tmp.3 = getm $.Toybox.WatchUi;
+            symbol [ Text %tmp.4 14 60 64 ];
+            %tmp.4 = getv function ? %tmp.3 :Text;
+            %tmp.5 = newd 5;
+            %tmp.7 = const :color;
+            symbol [ color %tmp.7 14 67 72 const ];
+            symbol [ Graphics %tmp.8 14 74 82 ];
+            %tmp.8 = getm $.Toybox.Graphics;
+            symbol [ COLOR_WHITE %tmp.9 14 83 94 ];
+            %tmp.9 = getv %tmp.8 :COLOR_WHITE;
+            %tmp.10 = dup %tmp.5;
+            %tmp.11 = aputv %tmp.10 %tmp.7 %tmp.9;
+            %tmp.13 = const :locX;
+            symbol [ locX %tmp.13 14 97 101 const ];
+            %tmp.14 = lgetv %dc;
+            symbol [ dc %tmp.14 14 104 106 ];
+            symbol [ getWidth %tmp.15 14 107 115 ];
+            %tmp.15 = getv function %tmp.14 :getWidth;
+            %tmp.16 = invoke %tmp.14 %tmp.15();
+            %tmp.17 = 0.5;
+            %tmp.18 = mul %tmp.16 %tmp.17;
+            %tmp.19 = dup %tmp.11;
+            %tmp.20 = aputv %tmp.19 %tmp.13 %tmp.18;
+            %tmp.22 = const :locY;
+            symbol [ locY %tmp.22 14 127 131 const ];
+            %tmp.23 = 30;
+            %tmp.24 = dup %tmp.20;
+            %tmp.25 = aputv %tmp.24 %tmp.22 %tmp.23;
+            %tmp.27 = const :text;
+            symbol [ text %tmp.27 14 138 142 const ];
+            symbol [ $ %tmp.28 14 144 145 ];
+            %tmp.28 = getm $;
+            symbol [ Rez %tmp.29 14 146 149 ];
+            %tmp.29 = getv %tmp.28 :Rez;
+            symbol [ Strings %tmp.30 14 150 157 ];
+            %tmp.30 = getv %tmp.29 :Strings;
+            symbol [ AppName %tmp.31 14 158 165 ];
+            %tmp.31 = getv %tmp.30 :AppName;
+            %tmp.32 = dup %tmp.25;
+            %tmp.33 = aputv %tmp.32 %tmp.27 %tmp.31;
+            %tmp.35 = const :font;
+            symbol [ font %tmp.35 14 168 172 const ];
+            symbol [ Graphics %tmp.36 14 174 182 ];
+            %tmp.36 = getm $.Toybox.Graphics;
+            symbol [ FONT_MEDIUM %tmp.37 14 183 194 ];
+            %tmp.37 = getv %tmp.36 :FONT_MEDIUM;
+            %tmp.38 = dup %tmp.33;
+            %tmp.39 = aputv %tmp.38 %tmp.35 %tmp.37;
+            %tmp.1 = newc %tmp.4 (%tmp.39);
+            lputv %rez_cmp_local_text_1193959466.1 %tmp.1;
+            symbol [ rez_cmp_local_text_1193959466 %rez_cmp_local_text_1193959466.1 14 16 45 ];
+[ "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen" 16 12 ]
+            %tmp.40 = newa 1 Array<WatchUi.Drawable>;
+            symbol [ Array %tmp.40 16 54 59 ];
+            symbol [ WatchUi %tmp.40 16 60 67 ];
+            symbol [ Drawable %tmp.40 16 68 76 ];
+            %tmp.41 = lgetv %rez_cmp_local_text_1193959466.1;
+            symbol [ rez_cmp_local_text_1193959466 %tmp.41 16 20 49 ];
+            %tmp.42 = dup %tmp.40;
+            %tmp.43 = aputv %tmp.42 0 %tmp.41;
+            ret %tmp.43;
+_Users_andy_VSCode_GarminTest_TestGarmin_bin_gen_006_B4062_00_source_Rez_mcgen_13_74_17_8_stop:
+        }
+    }
+    [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 20; @symbol_moduledef = [Menus,20,11,16]; ]
+    module Menus {
+        [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 20; ]
+        <init> {
+        }
+        [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 21; @symbol_classdef = [MainMenu,21,14,22]; @symbol_extends<0> = [WatchUi,21,31,38]; @symbol_extends<1> = [Menu,21,39,43]; ]
+        class MainMenu extends WatchUi.Menu {
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 21; ]
+            <init> {
+            }
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 21; ]
+            static
+            <init> {
+            }
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 22; @symbol_functiondef = [initialize,22,21,31]; ]
+            function initialize() as Void {
+_Users_andy_VSCode_GarminTest_TestGarmin_bin_gen_006_B4062_00_source_Rez_mcgen_22_34_27_12_start:
+[ "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen" 23 16 ]
+                symbol [ Menu %tmp.2 23 16 20 ];
+                %tmp.2 = getv ? :Menu;
+                symbol [ initialize %tmp.3 23 21 31 ];
+                %tmp.3 = getv function %tmp.2 :initialize;
+                invoke %tmp.2 %tmp.3();
+[ "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen" 24 16 ]
+                %tmp.4 = self;
+                symbol [ addItem %tmp.5 24 16 23 ];
+                %tmp.5 = getv function %tmp.4 :addItem;
+                symbol [ WatchUi %tmp.6 24 25 32 ];
+                %tmp.6 = getm $.Toybox.WatchUi;
+                symbol [ loadResource %tmp.7 24 33 45 ];
+                %tmp.7 = getv function %tmp.6 :loadResource;
+                symbol [ $ %tmp.8 24 46 47 ];
+                %tmp.8 = getm $;
+                symbol [ Rez %tmp.9 24 48 51 ];
+                %tmp.9 = getv %tmp.8 :Rez;
+                symbol [ Strings %tmp.10 24 52 59 ];
+                %tmp.10 = getv %tmp.9 :Strings;
+                symbol [ MenuItem1 %tmp.11 24 60 69 ];
+                %tmp.11 = getv %tmp.10 :MenuItem1;
+                %tmp.12 = invoke %tmp.6 %tmp.7(%tmp.11);
+                %tmp.13 = as %tmp.12 String;
+                symbol [ String %tmp.13 24 74 80 ];
+                %tmp.15 = const :item_1;
+                symbol [ item_1 %tmp.15 24 84 90 const ];
+                invoke %tmp.4 %tmp.5(%tmp.13, %tmp.15);
+[ "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen" 25 16 ]
+                %tmp.16 = self;
+                symbol [ addItem %tmp.17 25 16 23 ];
+                %tmp.17 = getv function %tmp.16 :addItem;
+                symbol [ WatchUi %tmp.18 25 25 32 ];
+                %tmp.18 = getm $.Toybox.WatchUi;
+                symbol [ loadResource %tmp.19 25 33 45 ];
+                %tmp.19 = getv function %tmp.18 :loadResource;
+                symbol [ $ %tmp.20 25 46 47 ];
+                %tmp.20 = getm $;
+                symbol [ Rez %tmp.21 25 48 51 ];
+                %tmp.21 = getv %tmp.20 :Rez;
+                symbol [ Strings %tmp.22 25 52 59 ];
+                %tmp.22 = getv %tmp.21 :Strings;
+                symbol [ MenuItem2 %tmp.23 25 60 69 ];
+                %tmp.23 = getv %tmp.22 :MenuItem2;
+                %tmp.24 = invoke %tmp.18 %tmp.19(%tmp.23);
+                %tmp.25 = as %tmp.24 String;
+                symbol [ String %tmp.25 25 74 80 ];
+                %tmp.27 = const :item_2;
+                symbol [ item_2 %tmp.27 25 84 90 const ];
+                invoke %tmp.16 %tmp.17(%tmp.25, %tmp.27);
+[ "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen" 26 16 ]
+                %tmp.28 = self;
+                symbol [ addItem %tmp.29 26 16 23 ];
+                %tmp.29 = getv function %tmp.28 :addItem;
+                symbol [ WatchUi %tmp.30 26 25 32 ];
+                %tmp.30 = getm $.Toybox.WatchUi;
+                symbol [ loadResource %tmp.31 26 33 45 ];
+                %tmp.31 = getv function %tmp.30 :loadResource;
+                symbol [ $ %tmp.32 26 46 47 ];
+                %tmp.32 = getm $;
+                symbol [ Rez %tmp.33 26 48 51 ];
+                %tmp.33 = getv %tmp.32 :Rez;
+                symbol [ Strings %tmp.34 26 52 59 ];
+                %tmp.34 = getv %tmp.33 :Strings;
+                symbol [ Settings %tmp.35 26 60 68 ];
+                %tmp.35 = getv %tmp.34 :Settings;
+                %tmp.36 = invoke %tmp.30 %tmp.31(%tmp.35);
+                %tmp.37 = as %tmp.36 String;
+                symbol [ String %tmp.37 26 73 79 ];
+                %tmp.39 = const :settings;
+                symbol [ settings %tmp.39 26 83 91 const ];
+                invoke %tmp.28 %tmp.29(%tmp.37, %tmp.39);
+_Users_andy_VSCode_GarminTest_TestGarmin_bin_gen_006_B4062_00_source_Rez_mcgen_22_34_27_12_stop:
+            }
+        }
+    }
+    [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 31; @symbol_moduledef = [Strings,31,11,18]; ]
+    module Strings {
+        [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 31; ]
+        <init> {
+        }
+        [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 32; @position = 27; initialized = true; @symbol_vardef = [MenuItem1,32,27,36]; @symbol_type<0> = [ResourceId,32,40,50]; ]
+        var MenuItem1 as ResourceId;
+        [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 33; @position = 27; initialized = true; @symbol_vardef = [MenuItem2,33,27,36]; @symbol_type<0> = [ResourceId,33,40,50]; ]
+        var MenuItem2 as ResourceId;
+        [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 34; @position = 27; initialized = true; @symbol_vardef = [Settings,34,27,35]; @symbol_type<0> = [ResourceId,34,39,49]; ]
+        var Settings as ResourceId;
+        [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 35; @position = 27; initialized = true; @symbol_vardef = [AppName,35,27,34]; @symbol_type<0> = [ResourceId,35,38,48]; ]
+        var AppName as ResourceId;
+    }
+    [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 38; @symbol_moduledef = [Styles,38,11,17]; ]
+    module Styles {
+        [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 38; ]
+        <init> {
+        }
+        [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 39; @symbol_moduledef = [prompt_font_enhanced_readability__body_with_title,39,15,64]; ]
+        module prompt_font_enhanced_readability__body_with_title {
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 39; ]
+            <init> {
+            }
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 40; @position = 18; @symbol_constdef = [exclude,40,18,25]; @symbol_type<0> = [Boolean,40,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 43; @symbol_moduledef = [system_size__menu_header,43,15,39]; ]
+        module system_size__menu_header {
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 43; ]
+            <init> {
+            }
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 44; @position = 18; @symbol_constdef = [height,44,18,24]; @symbol_type<0> = [Number,44,28,34]; ]
+            const height as Number = 0;
+        }
+        [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 47; @symbol_moduledef = [system_loc__hint_button_left_bottom,47,15,50]; ]
+        module system_loc__hint_button_left_bottom {
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 47; ]
+            <init> {
+            }
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 48; @position = 18; @symbol_constdef = [exclude,48,18,25]; @symbol_type<0> = [Boolean,48,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 51; @symbol_moduledef = [prompt_font_enhanced_readability__body_no_title,51,15,62]; ]
+        module prompt_font_enhanced_readability__body_no_title {
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 51; ]
+            <init> {
+            }
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 52; @position = 18; @symbol_constdef = [exclude,52,18,25]; @symbol_type<0> = [Boolean,52,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 55; @symbol_moduledef = [prompt_loc__body_no_title,55,15,40]; ]
+        module prompt_loc__body_no_title {
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 55; ]
+            <init> {
+            }
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 56; @position = 18; @symbol_constdef = [x,56,18,19]; @symbol_type<0> = [Number,56,23,29]; ]
+            const x as Number = 8;
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 57; @position = 18; @symbol_constdef = [y,57,18,19]; @symbol_type<0> = [Number,57,23,29]; ]
+            const y as Number = 14;
+        }
+        [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 60; @symbol_moduledef = [system_icon_dark__about,60,15,38]; ]
+        module system_icon_dark__about {
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 60; ]
+            <init> {
+            }
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 61; @position = 18; @symbol_constdef = [filename,61,18,26]; @symbol_type<0> = [String,61,30,36]; ]
+            const filename as String = "/Users/andy/Library/Application Support/Garmin/ConnectIQ/Devices/edge840/system_icon_dark__about.svg";
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 62; @position = 18; @symbol_constdef = [disableTransparency,62,18,37]; @symbol_type<0> = [Boolean,62,41,48]; ]
+            const disableTransparency as Boolean = true;
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 63; @position = 18; @symbol_constdef = [dithering,63,18,27]; @symbol_type<0> = [String,63,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 64; @position = 18; @symbol_constdef = [automaticPalette,64,18,34]; @symbol_type<0> = [Boolean,64,38,45]; ]
+            const automaticPalette as Boolean = true;
+        }
+        [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 67; @symbol_moduledef = [system_icon_light__question,67,15,42]; ]
+        module system_icon_light__question {
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 67; ]
+            <init> {
+            }
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 68; @position = 18; @symbol_constdef = [filename,68,18,26]; @symbol_type<0> = [String,68,30,36]; ]
+            const filename as String = "/Users/andy/Library/Application Support/Garmin/ConnectIQ/Devices/edge840/system_icon_light__question.svg";
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 69; @position = 18; @symbol_constdef = [disableTransparency,69,18,37]; @symbol_type<0> = [Boolean,69,41,48]; ]
+            const disableTransparency as Boolean = true;
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 70; @position = 18; @symbol_constdef = [dithering,70,18,27]; @symbol_type<0> = [String,70,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 71; @position = 18; @symbol_constdef = [automaticPalette,71,18,34]; @symbol_type<0> = [Boolean,71,38,45]; ]
+            const automaticPalette as Boolean = true;
+        }
+        [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 74; @symbol_moduledef = [system_loc__hint_button_left_top,74,15,47]; ]
+        module system_loc__hint_button_left_top {
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 74; ]
+            <init> {
+            }
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 75; @position = 18; @symbol_constdef = [exclude,75,18,25]; @symbol_type<0> = [Boolean,75,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 78; @symbol_moduledef = [prompt_font__title,78,15,33]; ]
+        module prompt_font__title {
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 78; ]
+            <init> {
+            }
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 79; @position = 18; @symbol_constdef = [exclude,79,18,25]; @symbol_type<0> = [Boolean,79,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 82; @symbol_moduledef = [system_icon_dark__discard,82,15,40]; ]
+        module system_icon_dark__discard {
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 82; ]
+            <init> {
+            }
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 83; @position = 18; @symbol_constdef = [filename,83,18,26]; @symbol_type<0> = [String,83,30,36]; ]
+            const filename as String = "/Users/andy/Library/Application Support/Garmin/ConnectIQ/Devices/edge840/system_icon_dark__discard.svg";
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 84; @position = 18; @symbol_constdef = [disableTransparency,84,18,37]; @symbol_type<0> = [Boolean,84,41,48]; ]
+            const disableTransparency as Boolean = true;
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 85; @position = 18; @symbol_constdef = [dithering,85,18,27]; @symbol_type<0> = [String,85,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 86; @position = 18; @symbol_constdef = [automaticPalette,86,18,34]; @symbol_type<0> = [Boolean,86,38,45]; ]
+            const automaticPalette as Boolean = true;
+        }
+        [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 89; @symbol_moduledef = [system_size__menu_item,89,15,37]; ]
+        module system_size__menu_item {
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 89; ]
+            <init> {
+            }
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 90; @position = 18; @symbol_constdef = [width,90,18,23]; @symbol_type<0> = [Number,90,27,33]; ]
+            const width as Number = 246;
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 91; @position = 18; @symbol_constdef = [height,91,18,24]; @symbol_type<0> = [Number,91,28,34]; ]
+            const height as Number = 70;
+        }
+        [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 94; @symbol_moduledef = [system_color_dark__text,94,15,38]; ]
+        module system_color_dark__text {
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 94; ]
+            <init> {
+[ "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen" 96 18 ]
+                symbol [ Graphics %tmp.40 96 31 39 ];
+                %tmp.40 = getm $.Toybox.Graphics;
+                symbol [ COLOR_TRANSPARENT %tmp.41 96 40 57 ];
+                %tmp.41 = getv %tmp.40 :COLOR_TRANSPARENT;
+                putv self :background %tmp.41;
+            }
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 95; @position = 18; @symbol_constdef = [color,95,18,23]; @symbol_type<0> = [Number,95,27,33]; ]
+            const color as Number = 0xFFFFFF;
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 96; @position = 18; @symbol_constdef = [background,96,18,28]; ]
+            const background;
+        }
+        [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 99; @symbol_moduledef = [system_icon_destructive__discard,99,15,47]; ]
+        module system_icon_destructive__discard {
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 99; ]
+            <init> {
+            }
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 100; @position = 18; @symbol_constdef = [filename,100,18,26]; @symbol_type<0> = [String,100,30,36]; ]
+            const filename as String = "/Users/andy/Library/Application Support/Garmin/ConnectIQ/Devices/edge840/system_icon_destructive__discard.svg";
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 101; @position = 18; @symbol_constdef = [disableTransparency,101,18,37]; @symbol_type<0> = [Boolean,101,41,48]; ]
+            const disableTransparency as Boolean = true;
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 102; @position = 18; @symbol_constdef = [dithering,102,18,27]; @symbol_type<0> = [String,102,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 103; @position = 18; @symbol_constdef = [automaticPalette,103,18,34]; @symbol_type<0> = [Boolean,103,38,45]; ]
+            const automaticPalette as Boolean = true;
+        }
+        [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 106; @symbol_moduledef = [system_icon_dark__hint_action_menu,106,15,49]; ]
+        module system_icon_dark__hint_action_menu {
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 106; ]
+            <init> {
+            }
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 107; @position = 18; @symbol_constdef = [exclude,107,18,25]; @symbol_type<0> = [Boolean,107,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 110; @symbol_moduledef = [prompt_size__title,110,15,33]; ]
+        module prompt_size__title {
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 110; ]
+            <init> {
+            }
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 111; @position = 18; @symbol_constdef = [exclude,111,18,25]; @symbol_type<0> = [Boolean,111,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 114; @symbol_moduledef = [confirmation_font__body,114,15,38]; ]
+        module confirmation_font__body {
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 114; ]
+            <init> {
+[ "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen" 115 18 ]
+                symbol [ Graphics %tmp.42 115 34 42 ];
+                %tmp.42 = getm $.Toybox.Graphics;
+                symbol [ TEXT_JUSTIFY_CENTER %tmp.43 115 43 62 ];
+                %tmp.43 = getv %tmp.42 :TEXT_JUSTIFY_CENTER;
+                symbol [ Graphics %tmp.44 115 63 71 ];
+                %tmp.44 = getm $.Toybox.Graphics;
+                symbol [ TEXT_JUSTIFY_VCENTER %tmp.45 115 72 92 ];
+                %tmp.45 = getv %tmp.44 :TEXT_JUSTIFY_VCENTER;
+                %tmp.46 = bitor %tmp.43 %tmp.45;
+                putv self :justification %tmp.46;
+[ "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen" 116 18 ]
+                symbol [ Graphics %tmp.47 116 25 33 ];
+                %tmp.47 = getm $.Toybox.Graphics;
+                symbol [ FONT_MEDIUM %tmp.48 116 34 45 ];
+                %tmp.48 = getv %tmp.47 :FONT_MEDIUM;
+                putv self :font %tmp.48;
+            }
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 115; @position = 18; @symbol_constdef = [justification,115,18,31]; ]
+            const justification;
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 116; @position = 18; @symbol_constdef = [font,116,18,22]; ]
+            const font;
+        }
+        [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 119; @symbol_moduledef = [system_color_dark__background,119,15,44]; ]
+        module system_color_dark__background {
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 119; ]
+            <init> {
+            }
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 120; @position = 18; @symbol_constdef = [color,120,18,23]; @symbol_type<0> = [Number,120,27,33]; ]
+            const color as Number = 0x000000;
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 121; @position = 18; @symbol_constdef = [background,121,18,28]; @symbol_type<0> = [Number,121,32,38]; ]
+            const background as Number = 0x000000;
+        }
+        [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 124; @symbol_moduledef = [system_icon_destructive__hint_button_left_top,124,15,60]; ]
+        module system_icon_destructive__hint_button_left_top {
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 124; ]
+            <init> {
+            }
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 125; @position = 18; @symbol_constdef = [exclude,125,18,25]; @symbol_type<0> = [Boolean,125,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 128; @symbol_moduledef = [system_size__launch_icon,128,15,39]; ]
+        module system_size__launch_icon {
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 128; ]
+            <init> {
+            }
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 129; @position = 18; @symbol_constdef = [scaleX,129,18,24]; @symbol_type<0> = [Number,129,28,34]; ]
+            const scaleX as Number = 35;
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 130; @position = 18; @symbol_constdef = [scaleY,130,18,24]; @symbol_type<0> = [Number,130,28,34]; ]
+            const scaleY as Number = 35;
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 131; @position = 18; @symbol_constdef = [scaleRelativeTo,131,18,33]; @symbol_type<0> = [String,131,37,43]; ]
+            const scaleRelativeTo as String = "screen";
+        }
+        [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 134; @symbol_moduledef = [confirmation_input__confirm,134,15,42]; ]
+        module confirmation_input__confirm {
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 134; ]
+            <init> {
+[ "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen" 135 18 ]
+                symbol [ WatchUi %tmp.49 135 27 34 ];
+                %tmp.49 = getm $.Toybox.WatchUi;
+                symbol [ KEY_ENTER %tmp.50 135 35 44 ];
+                %tmp.50 = getv %tmp.49 :KEY_ENTER;
+                putv self :button %tmp.50;
+            }
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 135; @position = 18; @symbol_constdef = [button,135,18,24]; ]
+            const button;
+        }
+        [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 138; @symbol_moduledef = [prompt_font__body_with_title,138,15,43]; ]
+        module prompt_font__body_with_title {
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 138; ]
+            <init> {
+[ "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen" 139 18 ]
+                symbol [ Graphics %tmp.51 139 34 42 ];
+                %tmp.51 = getm $.Toybox.Graphics;
+                symbol [ TEXT_JUSTIFY_CENTER %tmp.52 139 43 62 ];
+                %tmp.52 = getv %tmp.51 :TEXT_JUSTIFY_CENTER;
+                symbol [ Graphics %tmp.53 139 63 71 ];
+                %tmp.53 = getm $.Toybox.Graphics;
+                symbol [ TEXT_JUSTIFY_VCENTER %tmp.54 139 72 92 ];
+                %tmp.54 = getv %tmp.53 :TEXT_JUSTIFY_VCENTER;
+                %tmp.55 = bitor %tmp.52 %tmp.54;
+                putv self :justification %tmp.55;
+[ "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen" 140 18 ]
+                symbol [ Graphics %tmp.56 140 25 33 ];
+                %tmp.56 = getm $.Toybox.Graphics;
+                symbol [ FONT_MEDIUM %tmp.57 140 34 45 ];
+                %tmp.57 = getv %tmp.56 :FONT_MEDIUM;
+                putv self :font %tmp.57;
+            }
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 139; @position = 18; @symbol_constdef = [justification,139,18,31]; ]
+            const justification;
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 140; @position = 18; @symbol_constdef = [font,140,18,22]; ]
+            const font;
+        }
+        [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 143; @symbol_moduledef = [confirmation_loc__body,143,15,37]; ]
+        module confirmation_loc__body {
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 143; ]
+            <init> {
+            }
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 144; @position = 18; @symbol_constdef = [x,144,18,19]; @symbol_type<0> = [Number,144,23,29]; ]
+            const x as Number = 1;
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 145; @position = 18; @symbol_constdef = [y,145,18,19]; @symbol_type<0> = [Number,145,23,29]; ]
+            const y as Number = 23;
+        }
+        [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 148; @symbol_moduledef = [system_icon_destructive__hint_button_left_bottom,148,15,63]; ]
+        module system_icon_destructive__hint_button_left_bottom {
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 148; ]
+            <init> {
+            }
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 149; @position = 18; @symbol_constdef = [exclude,149,18,25]; @symbol_type<0> = [Boolean,149,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 152; @symbol_moduledef = [prompt_color_dark__background,152,15,44]; ]
+        module prompt_color_dark__background {
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 152; ]
+            <init> {
+            }
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 153; @position = 18; @symbol_constdef = [color,153,18,23]; @symbol_type<0> = [Number,153,27,33]; ]
+            const color as Number = 0x000000;
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 154; @position = 18; @symbol_constdef = [background,154,18,28]; @symbol_type<0> = [Number,154,32,38]; ]
+            const background as Number = 0x000000;
+        }
+        [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 157; @symbol_moduledef = [system_icon_destructive__hint_action_menu,157,15,56]; ]
+        module system_icon_destructive__hint_action_menu {
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 157; ]
+            <init> {
+            }
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 158; @position = 18; @symbol_constdef = [exclude,158,18,25]; @symbol_type<0> = [Boolean,158,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 161; @symbol_moduledef = [system_loc__hint_action_menu,161,15,43]; ]
+        module system_loc__hint_action_menu {
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 161; ]
+            <init> {
+            }
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 162; @position = 18; @symbol_constdef = [exclude,162,18,25]; @symbol_type<0> = [Boolean,162,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 165; @symbol_moduledef = [confirmation_icon__hint_confirm,165,15,46]; ]
+        module confirmation_icon__hint_confirm {
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 165; ]
+            <init> {
+            }
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 166; @position = 18; @symbol_constdef = [filename,166,18,26]; @symbol_type<0> = [String,166,30,36]; ]
+            const filename as String = "/Users/andy/Library/Application Support/Garmin/ConnectIQ/Devices/edge840/confirmation_icon__hint_completion.svg";
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 167; @position = 18; @symbol_constdef = [disableTransparency,167,18,37]; @symbol_type<0> = [Boolean,167,41,48]; ]
+            const disableTransparency as Boolean = true;
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 168; @position = 18; @symbol_constdef = [dithering,168,18,27]; @symbol_type<0> = [String,168,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 169; @position = 18; @symbol_constdef = [automaticPalette,169,18,34]; @symbol_type<0> = [Boolean,169,38,45]; ]
+            const automaticPalette as Boolean = true;
+        }
+        [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 172; @symbol_moduledef = [system_loc__hint_button_left_middle,172,15,50]; ]
+        module system_loc__hint_button_left_middle {
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 172; ]
+            <init> {
+            }
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 173; @position = 18; @symbol_constdef = [exclude,173,18,25]; @symbol_type<0> = [Boolean,173,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 176; @symbol_moduledef = [prompt_size__body_no_title,176,15,41]; ]
+        module prompt_size__body_no_title {
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 176; ]
+            <init> {
+            }
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 177; @position = 18; @symbol_constdef = [width,177,18,23]; @symbol_type<0> = [Number,177,27,33]; ]
+            const width as Number = 230;
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 178; @position = 18; @symbol_constdef = [height,178,18,24]; @symbol_type<0> = [Number,178,28,34]; ]
+            const height as Number = 225;
+        }
+        [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 181; @symbol_moduledef = [system_icon_light__hint_button_left_top,181,15,54]; ]
+        module system_icon_light__hint_button_left_top {
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 181; ]
+            <init> {
+            }
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 182; @position = 18; @symbol_constdef = [exclude,182,18,25]; @symbol_type<0> = [Boolean,182,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 185; @symbol_moduledef = [prompt_color_light__background,185,15,45]; ]
+        module prompt_color_light__background {
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 185; ]
+            <init> {
+            }
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 186; @position = 18; @symbol_constdef = [color,186,18,23]; @symbol_type<0> = [Number,186,27,33]; ]
+            const color as Number = 0xFFFFFF;
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 187; @position = 18; @symbol_constdef = [background,187,18,28]; @symbol_type<0> = [Number,187,32,38]; ]
+            const background as Number = 0xFFFFFF;
+        }
+        [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 190; @symbol_moduledef = [confirmation_input__delete,190,15,41]; ]
+        module confirmation_input__delete {
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 190; ]
+            <init> {
+[ "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen" 191 18 ]
+                symbol [ WatchUi %tmp.58 191 27 34 ];
+                %tmp.58 = getm $.Toybox.WatchUi;
+                symbol [ KEY_ESC %tmp.59 191 35 42 ];
+                %tmp.59 = getv %tmp.58 :KEY_ESC;
+                putv self :button %tmp.59;
+            }
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 191; @position = 18; @symbol_constdef = [button,191,18,24]; ]
+            const button;
+        }
+        [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 194; @symbol_moduledef = [system_icon_dark__hint_button_left_top,194,15,53]; ]
+        module system_icon_dark__hint_button_left_top {
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 194; ]
+            <init> {
+            }
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 195; @position = 18; @symbol_constdef = [exclude,195,18,25]; @symbol_type<0> = [Boolean,195,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 198; @symbol_moduledef = [system_input__action_menu,198,15,40]; ]
+        module system_input__action_menu {
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 198; ]
+            <init> {
+[ "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen" 199 18 ]
+                symbol [ WatchUi %tmp.60 199 27 34 ];
+                %tmp.60 = getm $.Toybox.WatchUi;
+                symbol [ KEY_MENU %tmp.61 199 35 43 ];
+                %tmp.61 = getv %tmp.60 :KEY_MENU;
+                putv self :button %tmp.61;
+            }
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 199; @position = 18; @symbol_constdef = [button,199,18,24]; ]
+            const button;
+        }
+        [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 202; @symbol_moduledef = [system_icon_light__save,202,15,38]; ]
+        module system_icon_light__save {
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 202; ]
+            <init> {
+            }
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 203; @position = 18; @symbol_constdef = [filename,203,18,26]; @symbol_type<0> = [String,203,30,36]; ]
+            const filename as String = "/Users/andy/Library/Application Support/Garmin/ConnectIQ/Devices/edge840/system_icon_light__save.svg";
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 204; @position = 18; @symbol_constdef = [disableTransparency,204,18,37]; @symbol_type<0> = [Boolean,204,41,48]; ]
+            const disableTransparency as Boolean = true;
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 205; @position = 18; @symbol_constdef = [dithering,205,18,27]; @symbol_type<0> = [String,205,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 206; @position = 18; @symbol_constdef = [automaticPalette,206,18,34]; @symbol_type<0> = [Boolean,206,38,45]; ]
+            const automaticPalette as Boolean = true;
+        }
+        [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 209; @symbol_moduledef = [prompt_color_light__body,209,15,39]; ]
+        module prompt_color_light__body {
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 209; ]
+            <init> {
+[ "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen" 211 18 ]
+                symbol [ Graphics %tmp.62 211 31 39 ];
+                %tmp.62 = getm $.Toybox.Graphics;
+                symbol [ COLOR_TRANSPARENT %tmp.63 211 40 57 ];
+                %tmp.63 = getv %tmp.62 :COLOR_TRANSPARENT;
+                putv self :background %tmp.63;
+            }
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 210; @position = 18; @symbol_constdef = [color,210,18,23]; @symbol_type<0> = [Number,210,27,33]; ]
+            const color as Number = 0x000000;
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 211; @position = 18; @symbol_constdef = [background,211,18,28]; ]
+            const background;
+        }
+        [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 214; @symbol_moduledef = [system_loc__subwindow,214,15,36]; ]
+        module system_loc__subwindow {
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 214; ]
+            <init> {
+            }
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 215; @position = 18; @symbol_constdef = [exclude,215,18,25]; @symbol_type<0> = [Boolean,215,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 218; @symbol_moduledef = [system_icon_light__warning,218,15,41]; ]
+        module system_icon_light__warning {
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 218; ]
+            <init> {
+            }
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 219; @position = 18; @symbol_constdef = [filename,219,18,26]; @symbol_type<0> = [String,219,30,36]; ]
+            const filename as String = "/Users/andy/Library/Application Support/Garmin/ConnectIQ/Devices/edge840/system_icon_light__warning.svg";
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 220; @position = 18; @symbol_constdef = [disableTransparency,220,18,37]; @symbol_type<0> = [Boolean,220,41,48]; ]
+            const disableTransparency as Boolean = true;
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 221; @position = 18; @symbol_constdef = [dithering,221,18,27]; @symbol_type<0> = [String,221,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 222; @position = 18; @symbol_constdef = [automaticPalette,222,18,34]; @symbol_type<0> = [Boolean,222,38,45]; ]
+            const automaticPalette as Boolean = true;
+        }
+        [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 225; @symbol_moduledef = [confirmation_color_light__body,225,15,45]; ]
+        module confirmation_color_light__body {
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 225; ]
+            <init> {
+[ "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen" 227 18 ]
+                symbol [ Graphics %tmp.64 227 31 39 ];
+                %tmp.64 = getm $.Toybox.Graphics;
+                symbol [ COLOR_TRANSPARENT %tmp.65 227 40 57 ];
+                %tmp.65 = getv %tmp.64 :COLOR_TRANSPARENT;
+                putv self :background %tmp.65;
+            }
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 226; @position = 18; @symbol_constdef = [color,226,18,23]; @symbol_type<0> = [Number,226,27,33]; ]
+            const color as Number = 0x000000;
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 227; @position = 18; @symbol_constdef = [background,227,18,28]; ]
+            const background;
+        }
+        [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 230; @symbol_moduledef = [confirmation_icon_light__hint_keep,230,15,49]; ]
+        module confirmation_icon_light__hint_keep {
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 230; ]
+            <init> {
+            }
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 231; @position = 18; @symbol_constdef = [filename,231,18,26]; @symbol_type<0> = [String,231,30,36]; ]
+            const filename as String = "/Users/andy/Library/Application Support/Garmin/ConnectIQ/Devices/edge840/confirmation_icon__hint_completion.svg";
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 232; @position = 18; @symbol_constdef = [disableTransparency,232,18,37]; @symbol_type<0> = [Boolean,232,41,48]; ]
+            const disableTransparency as Boolean = false;
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 233; @position = 18; @symbol_constdef = [dithering,233,18,27]; @symbol_type<0> = [String,233,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 234; @position = 18; @symbol_constdef = [automaticPalette,234,18,34]; @symbol_type<0> = [Boolean,234,38,45]; ]
+            const automaticPalette as Boolean = true;
+        }
+        [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 237; @symbol_moduledef = [activity_color_light__background,237,15,47]; ]
+        module activity_color_light__background {
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 237; ]
+            <init> {
+            }
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 238; @position = 18; @symbol_constdef = [color,238,18,23]; @symbol_type<0> = [Number,238,27,33]; ]
+            const color as Number = 0xFFFFFF;
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 239; @position = 18; @symbol_constdef = [background,239,18,28]; @symbol_type<0> = [Number,239,32,38]; ]
+            const background as Number = 0xFFFFFF;
+        }
+        [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 242; @symbol_moduledef = [system_icon_positive__hint_button_right_top,242,15,58]; ]
+        module system_icon_positive__hint_button_right_top {
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 242; ]
+            <init> {
+            }
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 243; @position = 18; @symbol_constdef = [exclude,243,18,25]; @symbol_type<0> = [Boolean,243,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 246; @symbol_moduledef = [system_size__screen,246,15,34]; ]
+        module system_size__screen {
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 246; ]
+            <init> {
+            }
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 247; @position = 18; @symbol_constdef = [width,247,18,23]; @symbol_type<0> = [Number,247,27,33]; ]
+            const width as Number = 246;
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 248; @position = 18; @symbol_constdef = [height,248,18,24]; @symbol_type<0> = [Number,248,28,34]; ]
+            const height as Number = 322;
+        }
+        [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 251; @symbol_moduledef = [system_icon_destructive__hint_button_right_bottom,251,15,64]; ]
+        module system_icon_destructive__hint_button_right_bottom {
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 251; ]
+            <init> {
+            }
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 252; @position = 18; @symbol_constdef = [exclude,252,18,25]; @symbol_type<0> = [Boolean,252,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 255; @symbol_moduledef = [system_color_light__background,255,15,45]; ]
+        module system_color_light__background {
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 255; ]
+            <init> {
+            }
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 256; @position = 18; @symbol_constdef = [color,256,18,23]; @symbol_type<0> = [Number,256,27,33]; ]
+            const color as Number = 0xFFFFFF;
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 257; @position = 18; @symbol_constdef = [background,257,18,28]; @symbol_type<0> = [Number,257,32,38]; ]
+            const background as Number = 0xFFFFFF;
+        }
+        [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 260; @symbol_moduledef = [system_icon_destructive__hint_button_right_top,260,15,61]; ]
+        module system_icon_destructive__hint_button_right_top {
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 260; ]
+            <init> {
+            }
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 261; @position = 18; @symbol_constdef = [exclude,261,18,25]; @symbol_type<0> = [Boolean,261,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 264; @symbol_moduledef = [confirmation_loc__hint_confirm,264,15,45]; ]
+        module confirmation_loc__hint_confirm {
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 264; ]
+            <init> {
+            }
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 265; @position = 18; @symbol_constdef = [x,265,18,19]; @symbol_type<0> = [Number,265,23,29]; ]
+            const x as Number = 195;
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 266; @position = 18; @symbol_constdef = [y,266,18,19]; @symbol_type<0> = [Number,266,23,29]; ]
+            const y as Number = 30;
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 267; @position = 18; @symbol_constdef = [horizontalJustification,267,18,41]; @symbol_type<0> = [String,267,45,51]; ]
+            const horizontalJustification as String = "center";
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 268; @position = 18; @symbol_constdef = [verticalJustification,268,18,39]; @symbol_type<0> = [String,268,43,49]; ]
+            const verticalJustification as String = "center";
+        }
+        [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 271; @symbol_moduledef = [activity_color_dark__text,271,15,40]; ]
+        module activity_color_dark__text {
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 271; ]
+            <init> {
+[ "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen" 273 18 ]
+                symbol [ Graphics %tmp.66 273 31 39 ];
+                %tmp.66 = getm $.Toybox.Graphics;
+                symbol [ COLOR_TRANSPARENT %tmp.67 273 40 57 ];
+                %tmp.67 = getv %tmp.66 :COLOR_TRANSPARENT;
+                putv self :background %tmp.67;
+            }
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 272; @position = 18; @symbol_constdef = [color,272,18,23]; @symbol_type<0> = [Number,272,27,33]; ]
+            const color as Number = 0xFFFFFF;
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 273; @position = 18; @symbol_constdef = [background,273,18,28]; ]
+            const background;
+        }
+        [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 276; @symbol_moduledef = [confirmation_input__keep,276,15,39]; ]
+        module confirmation_input__keep {
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 276; ]
+            <init> {
+[ "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen" 277 18 ]
+                symbol [ WatchUi %tmp.68 277 27 34 ];
+                %tmp.68 = getm $.Toybox.WatchUi;
+                symbol [ KEY_ENTER %tmp.69 277 35 44 ];
+                %tmp.69 = getv %tmp.68 :KEY_ENTER;
+                putv self :button %tmp.69;
+            }
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 277; @position = 18; @symbol_constdef = [button,277,18,24]; ]
+            const button;
+        }
+        [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 280; @symbol_moduledef = [prompt_loc__body_with_title,280,15,42]; ]
+        module prompt_loc__body_with_title {
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 280; ]
+            <init> {
+            }
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 281; @position = 18; @symbol_constdef = [x,281,18,19]; @symbol_type<0> = [Number,281,23,29]; ]
+            const x as Number = 8;
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 282; @position = 18; @symbol_constdef = [y,282,18,19]; @symbol_type<0> = [Number,282,23,29]; ]
+            const y as Number = 93;
+        }
+        [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 285; @symbol_moduledef = [system_icon_dark__search,285,15,39]; ]
+        module system_icon_dark__search {
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 285; ]
+            <init> {
+            }
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 286; @position = 18; @symbol_constdef = [filename,286,18,26]; @symbol_type<0> = [String,286,30,36]; ]
+            const filename as String = "/Users/andy/Library/Application Support/Garmin/ConnectIQ/Devices/edge840/system_icon_dark__search.svg";
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 287; @position = 18; @symbol_constdef = [disableTransparency,287,18,37]; @symbol_type<0> = [Boolean,287,41,48]; ]
+            const disableTransparency as Boolean = true;
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 288; @position = 18; @symbol_constdef = [dithering,288,18,27]; @symbol_type<0> = [String,288,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 289; @position = 18; @symbol_constdef = [automaticPalette,289,18,34]; @symbol_type<0> = [Boolean,289,38,45]; ]
+            const automaticPalette as Boolean = true;
+        }
+        [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 292; @symbol_moduledef = [activity_color_light__text,292,15,41]; ]
+        module activity_color_light__text {
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 292; ]
+            <init> {
+[ "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen" 294 18 ]
+                symbol [ Graphics %tmp.70 294 31 39 ];
+                %tmp.70 = getm $.Toybox.Graphics;
+                symbol [ COLOR_TRANSPARENT %tmp.71 294 40 57 ];
+                %tmp.71 = getv %tmp.70 :COLOR_TRANSPARENT;
+                putv self :background %tmp.71;
+            }
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 293; @position = 18; @symbol_constdef = [color,293,18,23]; @symbol_type<0> = [Number,293,27,33]; ]
+            const color as Number = 0x000000;
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 294; @position = 18; @symbol_constdef = [background,294,18,28]; ]
+            const background;
+        }
+        [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 297; @symbol_moduledef = [confirmation_icon__hint_keep,297,15,43]; ]
+        module confirmation_icon__hint_keep {
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 297; ]
+            <init> {
+            }
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 298; @position = 18; @symbol_constdef = [filename,298,18,26]; @symbol_type<0> = [String,298,30,36]; ]
+            const filename as String = "/Users/andy/Library/Application Support/Garmin/ConnectIQ/Devices/edge840/confirmation_icon__hint_completion.svg";
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 299; @position = 18; @symbol_constdef = [disableTransparency,299,18,37]; @symbol_type<0> = [Boolean,299,41,48]; ]
+            const disableTransparency as Boolean = false;
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 300; @position = 18; @symbol_constdef = [dithering,300,18,27]; @symbol_type<0> = [String,300,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 301; @position = 18; @symbol_constdef = [automaticPalette,301,18,34]; @symbol_type<0> = [Boolean,301,38,45]; ]
+            const automaticPalette as Boolean = true;
+        }
+        [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 304; @symbol_moduledef = [system_icon_dark__save,304,15,37]; ]
+        module system_icon_dark__save {
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 304; ]
+            <init> {
+            }
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 305; @position = 18; @symbol_constdef = [filename,305,18,26]; @symbol_type<0> = [String,305,30,36]; ]
+            const filename as String = "/Users/andy/Library/Application Support/Garmin/ConnectIQ/Devices/edge840/system_icon_dark__save.svg";
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 306; @position = 18; @symbol_constdef = [disableTransparency,306,18,37]; @symbol_type<0> = [Boolean,306,41,48]; ]
+            const disableTransparency as Boolean = true;
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 307; @position = 18; @symbol_constdef = [dithering,307,18,27]; @symbol_type<0> = [String,307,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 308; @position = 18; @symbol_constdef = [automaticPalette,308,18,34]; @symbol_type<0> = [Boolean,308,38,45]; ]
+            const automaticPalette as Boolean = true;
+        }
+        [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 311; @symbol_moduledef = [system_icon_destructive__hint_button_left_middle,311,15,63]; ]
+        module system_icon_destructive__hint_button_left_middle {
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 311; ]
+            <init> {
+            }
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 312; @position = 18; @symbol_constdef = [exclude,312,18,25]; @symbol_type<0> = [Boolean,312,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 315; @symbol_moduledef = [system_icon_light__search,315,15,40]; ]
+        module system_icon_light__search {
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 315; ]
+            <init> {
+            }
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 316; @position = 18; @symbol_constdef = [filename,316,18,26]; @symbol_type<0> = [String,316,30,36]; ]
+            const filename as String = "/Users/andy/Library/Application Support/Garmin/ConnectIQ/Devices/edge840/system_icon_light__search.svg";
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 317; @position = 18; @symbol_constdef = [disableTransparency,317,18,37]; @symbol_type<0> = [Boolean,317,41,48]; ]
+            const disableTransparency as Boolean = true;
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 318; @position = 18; @symbol_constdef = [dithering,318,18,27]; @symbol_type<0> = [String,318,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 319; @position = 18; @symbol_constdef = [automaticPalette,319,18,34]; @symbol_type<0> = [Boolean,319,38,45]; ]
+            const automaticPalette as Boolean = true;
+        }
+        [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 322; @symbol_moduledef = [system_icon_dark__hint_button_left_bottom,322,15,56]; ]
+        module system_icon_dark__hint_button_left_bottom {
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 322; ]
+            <init> {
+            }
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 323; @position = 18; @symbol_constdef = [exclude,323,18,25]; @symbol_type<0> = [Boolean,323,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 326; @symbol_moduledef = [system_icon_positive__hint_button_left_top,326,15,57]; ]
+        module system_icon_positive__hint_button_left_top {
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 326; ]
+            <init> {
+            }
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 327; @position = 18; @symbol_constdef = [exclude,327,18,25]; @symbol_type<0> = [Boolean,327,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 330; @symbol_moduledef = [system_loc__hint_button_right_bottom,330,15,51]; ]
+        module system_loc__hint_button_right_bottom {
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 330; ]
+            <init> {
+            }
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 331; @position = 18; @symbol_constdef = [exclude,331,18,25]; @symbol_type<0> = [Boolean,331,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 334; @symbol_moduledef = [confirmation_icon_dark__hint_reject,334,15,50]; ]
+        module confirmation_icon_dark__hint_reject {
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 334; ]
+            <init> {
+            }
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 335; @position = 18; @symbol_constdef = [filename,335,18,26]; @symbol_type<0> = [String,335,30,36]; ]
+            const filename as String = "/Users/andy/Library/Application Support/Garmin/ConnectIQ/Devices/edge840/confirmation_icon__hint_x.svg";
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 336; @position = 18; @symbol_constdef = [disableTransparency,336,18,37]; @symbol_type<0> = [Boolean,336,41,48]; ]
+            const disableTransparency as Boolean = true;
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 337; @position = 18; @symbol_constdef = [dithering,337,18,27]; @symbol_type<0> = [String,337,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 338; @position = 18; @symbol_constdef = [automaticPalette,338,18,34]; @symbol_type<0> = [Boolean,338,38,45]; ]
+            const automaticPalette as Boolean = true;
+        }
+        [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 341; @symbol_moduledef = [confirmation_color_dark__body,341,15,44]; ]
+        module confirmation_color_dark__body {
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 341; ]
+            <init> {
+[ "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen" 343 18 ]
+                symbol [ Graphics %tmp.72 343 31 39 ];
+                %tmp.72 = getm $.Toybox.Graphics;
+                symbol [ COLOR_TRANSPARENT %tmp.73 343 40 57 ];
+                %tmp.73 = getv %tmp.72 :COLOR_TRANSPARENT;
+                putv self :background %tmp.73;
+            }
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 342; @position = 18; @symbol_constdef = [color,342,18,23]; @symbol_type<0> = [Number,342,27,33]; ]
+            const color as Number = 0xFFFFFF;
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 343; @position = 18; @symbol_constdef = [background,343,18,28]; ]
+            const background;
+        }
+        [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 346; @symbol_moduledef = [confirmation_icon_light__hint_confirm,346,15,52]; ]
+        module confirmation_icon_light__hint_confirm {
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 346; ]
+            <init> {
+            }
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 347; @position = 18; @symbol_constdef = [filename,347,18,26]; @symbol_type<0> = [String,347,30,36]; ]
+            const filename as String = "/Users/andy/Library/Application Support/Garmin/ConnectIQ/Devices/edge840/confirmation_icon__hint_completion.svg";
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 348; @position = 18; @symbol_constdef = [disableTransparency,348,18,37]; @symbol_type<0> = [Boolean,348,41,48]; ]
+            const disableTransparency as Boolean = true;
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 349; @position = 18; @symbol_constdef = [dithering,349,18,27]; @symbol_type<0> = [String,349,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 350; @position = 18; @symbol_constdef = [automaticPalette,350,18,34]; @symbol_type<0> = [Boolean,350,38,45]; ]
+            const automaticPalette as Boolean = true;
+        }
+        [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 353; @symbol_moduledef = [prompt_color_dark__title,353,15,39]; ]
+        module prompt_color_dark__title {
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 353; ]
+            <init> {
+[ "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen" 355 18 ]
+                symbol [ Graphics %tmp.74 355 31 39 ];
+                %tmp.74 = getm $.Toybox.Graphics;
+                symbol [ COLOR_TRANSPARENT %tmp.75 355 40 57 ];
+                %tmp.75 = getv %tmp.74 :COLOR_TRANSPARENT;
+                putv self :background %tmp.75;
+            }
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 354; @position = 18; @symbol_constdef = [color,354,18,23]; @symbol_type<0> = [Number,354,27,33]; ]
+            const color as Number = 0xFFFFFF;
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 355; @position = 18; @symbol_constdef = [background,355,18,28]; ]
+            const background;
+        }
+        [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 358; @symbol_moduledef = [system_icon_destructive__cancel,358,15,46]; ]
+        module system_icon_destructive__cancel {
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 358; ]
+            <init> {
+            }
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 359; @position = 18; @symbol_constdef = [filename,359,18,26]; @symbol_type<0> = [String,359,30,36]; ]
+            const filename as String = "/Users/andy/Library/Application Support/Garmin/ConnectIQ/Devices/edge840/system_icon_destructive__cancel.svg";
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 360; @position = 18; @symbol_constdef = [disableTransparency,360,18,37]; @symbol_type<0> = [Boolean,360,41,48]; ]
+            const disableTransparency as Boolean = true;
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 361; @position = 18; @symbol_constdef = [dithering,361,18,27]; @symbol_type<0> = [String,361,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 362; @position = 18; @symbol_constdef = [automaticPalette,362,18,34]; @symbol_type<0> = [Boolean,362,38,45]; ]
+            const automaticPalette as Boolean = true;
+        }
+        [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 365; @symbol_moduledef = [system_icon_light__hint_button_right_bottom,365,15,58]; ]
+        module system_icon_light__hint_button_right_bottom {
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 365; ]
+            <init> {
+            }
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 366; @position = 18; @symbol_constdef = [exclude,366,18,25]; @symbol_type<0> = [Boolean,366,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 369; @symbol_moduledef = [prompt_loc__title,369,15,32]; ]
+        module prompt_loc__title {
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 369; ]
+            <init> {
+            }
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 370; @position = 18; @symbol_constdef = [exclude,370,18,25]; @symbol_type<0> = [Boolean,370,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 373; @symbol_moduledef = [confirmation_font_enhanced_readability__body,373,15,59]; ]
+        module confirmation_font_enhanced_readability__body {
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 373; ]
+            <init> {
+            }
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 374; @position = 18; @symbol_constdef = [exclude,374,18,25]; @symbol_type<0> = [Boolean,374,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 377; @symbol_moduledef = [prompt_color_light__title,377,15,40]; ]
+        module prompt_color_light__title {
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 377; ]
+            <init> {
+[ "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen" 379 18 ]
+                symbol [ Graphics %tmp.76 379 31 39 ];
+                %tmp.76 = getm $.Toybox.Graphics;
+                symbol [ COLOR_TRANSPARENT %tmp.77 379 40 57 ];
+                %tmp.77 = getv %tmp.76 :COLOR_TRANSPARENT;
+                putv self :background %tmp.77;
+            }
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 378; @position = 18; @symbol_constdef = [color,378,18,23]; @symbol_type<0> = [Number,378,27,33]; ]
+            const color as Number = 0x000000;
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 379; @position = 18; @symbol_constdef = [background,379,18,28]; ]
+            const background;
+        }
+        [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 382; @symbol_moduledef = [system_icon_dark__hint_button_right_top,382,15,54]; ]
+        module system_icon_dark__hint_button_right_top {
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 382; ]
+            <init> {
+            }
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 383; @position = 18; @symbol_constdef = [exclude,383,18,25]; @symbol_type<0> = [Boolean,383,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 386; @symbol_moduledef = [system_icon_dark__hint_button_left_middle,386,15,56]; ]
+        module system_icon_dark__hint_button_left_middle {
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 386; ]
+            <init> {
+            }
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 387; @position = 18; @symbol_constdef = [exclude,387,18,25]; @symbol_type<0> = [Boolean,387,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 390; @symbol_moduledef = [confirmation_icon_dark__hint_keep,390,15,48]; ]
+        module confirmation_icon_dark__hint_keep {
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 390; ]
+            <init> {
+            }
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 391; @position = 18; @symbol_constdef = [filename,391,18,26]; @symbol_type<0> = [String,391,30,36]; ]
+            const filename as String = "/Users/andy/Library/Application Support/Garmin/ConnectIQ/Devices/edge840/confirmation_icon__hint_completion.svg";
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 392; @position = 18; @symbol_constdef = [disableTransparency,392,18,37]; @symbol_type<0> = [Boolean,392,41,48]; ]
+            const disableTransparency as Boolean = false;
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 393; @position = 18; @symbol_constdef = [dithering,393,18,27]; @symbol_type<0> = [String,393,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 394; @position = 18; @symbol_constdef = [automaticPalette,394,18,34]; @symbol_type<0> = [Boolean,394,38,45]; ]
+            const automaticPalette as Boolean = true;
+        }
+        [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 397; @symbol_moduledef = [system_icon_light__cancel,397,15,40]; ]
+        module system_icon_light__cancel {
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 397; ]
+            <init> {
+            }
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 398; @position = 18; @symbol_constdef = [filename,398,18,26]; @symbol_type<0> = [String,398,30,36]; ]
+            const filename as String = "/Users/andy/Library/Application Support/Garmin/ConnectIQ/Devices/edge840/system_icon_light__cancel.svg";
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 399; @position = 18; @symbol_constdef = [disableTransparency,399,18,37]; @symbol_type<0> = [Boolean,399,41,48]; ]
+            const disableTransparency as Boolean = true;
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 400; @position = 18; @symbol_constdef = [dithering,400,18,27]; @symbol_type<0> = [String,400,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 401; @position = 18; @symbol_constdef = [automaticPalette,401,18,34]; @symbol_type<0> = [Boolean,401,38,45]; ]
+            const automaticPalette as Boolean = true;
+        }
+        [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 404; @symbol_moduledef = [confirmation_icon_light__hint_reject,404,15,51]; ]
+        module confirmation_icon_light__hint_reject {
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 404; ]
+            <init> {
+            }
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 405; @position = 18; @symbol_constdef = [filename,405,18,26]; @symbol_type<0> = [String,405,30,36]; ]
+            const filename as String = "/Users/andy/Library/Application Support/Garmin/ConnectIQ/Devices/edge840/confirmation_icon__hint_x.svg";
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 406; @position = 18; @symbol_constdef = [disableTransparency,406,18,37]; @symbol_type<0> = [Boolean,406,41,48]; ]
+            const disableTransparency as Boolean = true;
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 407; @position = 18; @symbol_constdef = [dithering,407,18,27]; @symbol_type<0> = [String,407,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 408; @position = 18; @symbol_constdef = [automaticPalette,408,18,34]; @symbol_type<0> = [Boolean,408,38,45]; ]
+            const automaticPalette as Boolean = true;
+        }
+        [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 411; @symbol_moduledef = [system_icon_light__about,411,15,39]; ]
+        module system_icon_light__about {
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 411; ]
+            <init> {
+            }
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 412; @position = 18; @symbol_constdef = [filename,412,18,26]; @symbol_type<0> = [String,412,30,36]; ]
+            const filename as String = "/Users/andy/Library/Application Support/Garmin/ConnectIQ/Devices/edge840/system_icon_light__about.svg";
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 413; @position = 18; @symbol_constdef = [disableTransparency,413,18,37]; @symbol_type<0> = [Boolean,413,41,48]; ]
+            const disableTransparency as Boolean = true;
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 414; @position = 18; @symbol_constdef = [dithering,414,18,27]; @symbol_type<0> = [String,414,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 415; @position = 18; @symbol_constdef = [automaticPalette,415,18,34]; @symbol_type<0> = [Boolean,415,38,45]; ]
+            const automaticPalette as Boolean = true;
+        }
+        [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 418; @symbol_moduledef = [system_size__toast_icon,418,15,38]; ]
+        module system_size__toast_icon {
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 418; ]
+            <init> {
+            }
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 419; @position = 18; @symbol_constdef = [scaleX,419,18,24]; @symbol_type<0> = [Number,419,28,34]; ]
+            const scaleX as Number = 32;
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 420; @position = 18; @symbol_constdef = [scaleY,420,18,24]; @symbol_type<0> = [Number,420,28,34]; ]
+            const scaleY as Number = 32;
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 421; @position = 18; @symbol_constdef = [scaleRelativeTo,421,18,33]; @symbol_type<0> = [String,421,37,43]; ]
+            const scaleRelativeTo as String = "screen";
+        }
+        [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 424; @symbol_moduledef = [system_icon_dark__hint_button_right_middle,424,15,57]; ]
+        module system_icon_dark__hint_button_right_middle {
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 424; ]
+            <init> {
+            }
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 425; @position = 18; @symbol_constdef = [exclude,425,18,25]; @symbol_type<0> = [Boolean,425,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 428; @symbol_moduledef = [confirmation_icon__hint_reject,428,15,45]; ]
+        module confirmation_icon__hint_reject {
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 428; ]
+            <init> {
+            }
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 429; @position = 18; @symbol_constdef = [filename,429,18,26]; @symbol_type<0> = [String,429,30,36]; ]
+            const filename as String = "/Users/andy/Library/Application Support/Garmin/ConnectIQ/Devices/edge840/confirmation_icon__hint_x.svg";
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 430; @position = 18; @symbol_constdef = [disableTransparency,430,18,37]; @symbol_type<0> = [Boolean,430,41,48]; ]
+            const disableTransparency as Boolean = true;
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 431; @position = 18; @symbol_constdef = [dithering,431,18,27]; @symbol_type<0> = [String,431,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 432; @position = 18; @symbol_constdef = [automaticPalette,432,18,34]; @symbol_type<0> = [Boolean,432,38,45]; ]
+            const automaticPalette as Boolean = true;
+        }
+        [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 435; @symbol_moduledef = [system_icon_light__hint_action_menu,435,15,50]; ]
+        module system_icon_light__hint_action_menu {
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 435; ]
+            <init> {
+            }
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 436; @position = 18; @symbol_constdef = [exclude,436,18,25]; @symbol_type<0> = [Boolean,436,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 439; @symbol_moduledef = [system_icon_light__hint_button_right_middle,439,15,58]; ]
+        module system_icon_light__hint_button_right_middle {
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 439; ]
+            <init> {
+            }
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 440; @position = 18; @symbol_constdef = [exclude,440,18,25]; @symbol_type<0> = [Boolean,440,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 443; @symbol_moduledef = [system_icon_destructive__hint_button_right_middle,443,15,64]; ]
+        module system_icon_destructive__hint_button_right_middle {
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 443; ]
+            <init> {
+            }
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 444; @position = 18; @symbol_constdef = [exclude,444,18,25]; @symbol_type<0> = [Boolean,444,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 447; @symbol_moduledef = [confirmation_loc__hint_reject,447,15,44]; ]
+        module confirmation_loc__hint_reject {
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 447; ]
+            <init> {
+            }
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 448; @position = 18; @symbol_constdef = [x,448,18,19]; @symbol_type<0> = [Number,448,23,29]; ]
+            const x as Number = 214;
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 449; @position = 18; @symbol_constdef = [y,449,18,19]; @symbol_type<0> = [Number,449,23,29]; ]
+            const y as Number = 249;
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 450; @position = 18; @symbol_constdef = [horizontalJustification,450,18,41]; @symbol_type<0> = [String,450,45,51]; ]
+            const horizontalJustification as String = "center";
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 451; @position = 18; @symbol_constdef = [verticalJustification,451,18,39]; @symbol_type<0> = [String,451,43,49]; ]
+            const verticalJustification as String = "center";
+        }
+        [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 454; @symbol_moduledef = [confirmation_icon_dark__hint_delete,454,15,50]; ]
+        module confirmation_icon_dark__hint_delete {
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 454; ]
+            <init> {
+            }
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 455; @position = 18; @symbol_constdef = [filename,455,18,26]; @symbol_type<0> = [String,455,30,36]; ]
+            const filename as String = "/Users/andy/Library/Application Support/Garmin/ConnectIQ/Devices/edge840/confirmation_icon__hint_back.svg";
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 456; @position = 18; @symbol_constdef = [disableTransparency,456,18,37]; @symbol_type<0> = [Boolean,456,41,48]; ]
+            const disableTransparency as Boolean = true;
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 457; @position = 18; @symbol_constdef = [dithering,457,18,27]; @symbol_type<0> = [String,457,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 458; @position = 18; @symbol_constdef = [automaticPalette,458,18,34]; @symbol_type<0> = [Boolean,458,38,45]; ]
+            const automaticPalette as Boolean = true;
+        }
+        [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 461; @symbol_moduledef = [activity_color_dark__background,461,15,46]; ]
+        module activity_color_dark__background {
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 461; ]
+            <init> {
+            }
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 462; @position = 18; @symbol_constdef = [color,462,18,23]; @symbol_type<0> = [Number,462,27,33]; ]
+            const color as Number = 0x000000;
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 463; @position = 18; @symbol_constdef = [background,463,18,28]; @symbol_type<0> = [Number,463,32,38]; ]
+            const background as Number = 0x000000;
+        }
+        [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 466; @symbol_moduledef = [system_icon_light__hint_button_left_bottom,466,15,57]; ]
+        module system_icon_light__hint_button_left_bottom {
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 466; ]
+            <init> {
+            }
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 467; @position = 18; @symbol_constdef = [exclude,467,18,25]; @symbol_type<0> = [Boolean,467,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 470; @symbol_moduledef = [system_icon_positive__hint_button_left_middle,470,15,60]; ]
+        module system_icon_positive__hint_button_left_middle {
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 470; ]
+            <init> {
+            }
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 471; @position = 18; @symbol_constdef = [exclude,471,18,25]; @symbol_type<0> = [Boolean,471,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 474; @symbol_moduledef = [system_size__menu_icon,474,15,37]; ]
+        module system_size__menu_icon {
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 474; ]
+            <init> {
+            }
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 475; @position = 18; @symbol_constdef = [scaleX,475,18,24]; @symbol_type<0> = [Number,475,28,34]; ]
+            const scaleX as Number = 40;
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 476; @position = 18; @symbol_constdef = [scaleY,476,18,24]; @symbol_type<0> = [Number,476,28,34]; ]
+            const scaleY as Number = 40;
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 477; @position = 18; @symbol_constdef = [scaleRelativeTo,477,18,33]; @symbol_type<0> = [String,477,37,43]; ]
+            const scaleRelativeTo as String = "screen";
+        }
+        [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 480; @symbol_moduledef = [system_icon_destructive__warning,480,15,47]; ]
+        module system_icon_destructive__warning {
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 480; ]
+            <init> {
+            }
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 481; @position = 18; @symbol_constdef = [filename,481,18,26]; @symbol_type<0> = [String,481,30,36]; ]
+            const filename as String = "/Users/andy/Library/Application Support/Garmin/ConnectIQ/Devices/edge840/system_icon_destructive__warning.svg";
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 482; @position = 18; @symbol_constdef = [disableTransparency,482,18,37]; @symbol_type<0> = [Boolean,482,41,48]; ]
+            const disableTransparency as Boolean = true;
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 483; @position = 18; @symbol_constdef = [dithering,483,18,27]; @symbol_type<0> = [String,483,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 484; @position = 18; @symbol_constdef = [automaticPalette,484,18,34]; @symbol_type<0> = [Boolean,484,38,45]; ]
+            const automaticPalette as Boolean = true;
+        }
+        [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 487; @symbol_moduledef = [system_loc__hint_button_right_middle,487,15,51]; ]
+        module system_loc__hint_button_right_middle {
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 487; ]
+            <init> {
+            }
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 488; @position = 18; @symbol_constdef = [exclude,488,18,25]; @symbol_type<0> = [Boolean,488,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 491; @symbol_moduledef = [system_icon_dark__cancel,491,15,39]; ]
+        module system_icon_dark__cancel {
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 491; ]
+            <init> {
+            }
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 492; @position = 18; @symbol_constdef = [filename,492,18,26]; @symbol_type<0> = [String,492,30,36]; ]
+            const filename as String = "/Users/andy/Library/Application Support/Garmin/ConnectIQ/Devices/edge840/system_icon_dark__cancel.svg";
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 493; @position = 18; @symbol_constdef = [disableTransparency,493,18,37]; @symbol_type<0> = [Boolean,493,41,48]; ]
+            const disableTransparency as Boolean = true;
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 494; @position = 18; @symbol_constdef = [dithering,494,18,27]; @symbol_type<0> = [String,494,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 495; @position = 18; @symbol_constdef = [automaticPalette,495,18,34]; @symbol_type<0> = [Boolean,495,38,45]; ]
+            const automaticPalette as Boolean = true;
+        }
+        [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 498; @symbol_moduledef = [prompt_size__body_with_title,498,15,43]; ]
+        module prompt_size__body_with_title {
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 498; ]
+            <init> {
+            }
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 499; @position = 18; @symbol_constdef = [width,499,18,23]; @symbol_type<0> = [Number,499,27,33]; ]
+            const width as Number = 230;
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 500; @position = 18; @symbol_constdef = [height,500,18,24]; @symbol_type<0> = [Number,500,28,34]; ]
+            const height as Number = 135;
+        }
+        [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 503; @symbol_moduledef = [system_loc__hint_button_right_top,503,15,48]; ]
+        module system_loc__hint_button_right_top {
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 503; ]
+            <init> {
+            }
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 504; @position = 18; @symbol_constdef = [exclude,504,18,25]; @symbol_type<0> = [Boolean,504,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 507; @symbol_moduledef = [system_color_light__text,507,15,39]; ]
+        module system_color_light__text {
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 507; ]
+            <init> {
+[ "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen" 509 18 ]
+                symbol [ Graphics %tmp.78 509 31 39 ];
+                %tmp.78 = getm $.Toybox.Graphics;
+                symbol [ COLOR_TRANSPARENT %tmp.79 509 40 57 ];
+                %tmp.79 = getv %tmp.78 :COLOR_TRANSPARENT;
+                putv self :background %tmp.79;
+            }
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 508; @position = 18; @symbol_constdef = [color,508,18,23]; @symbol_type<0> = [Number,508,27,33]; ]
+            const color as Number = 0x000000;
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 509; @position = 18; @symbol_constdef = [background,509,18,28]; ]
+            const background;
+        }
+        [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 512; @symbol_moduledef = [system_icon_light__check,512,15,39]; ]
+        module system_icon_light__check {
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 512; ]
+            <init> {
+            }
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 513; @position = 18; @symbol_constdef = [filename,513,18,26]; @symbol_type<0> = [String,513,30,36]; ]
+            const filename as String = "/Users/andy/Library/Application Support/Garmin/ConnectIQ/Devices/edge840/system_icon_light__check.svg";
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 514; @position = 18; @symbol_constdef = [disableTransparency,514,18,37]; @symbol_type<0> = [Boolean,514,41,48]; ]
+            const disableTransparency as Boolean = true;
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 515; @position = 18; @symbol_constdef = [dithering,515,18,27]; @symbol_type<0> = [String,515,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 516; @position = 18; @symbol_constdef = [automaticPalette,516,18,34]; @symbol_type<0> = [Boolean,516,38,45]; ]
+            const automaticPalette as Boolean = true;
+        }
+        [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 519; @symbol_moduledef = [confirmation_input__reject,519,15,41]; ]
+        module confirmation_input__reject {
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 519; ]
+            <init> {
+[ "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen" 520 18 ]
+                symbol [ WatchUi %tmp.80 520 27 34 ];
+                %tmp.80 = getm $.Toybox.WatchUi;
+                symbol [ KEY_ESC %tmp.81 520 35 42 ];
+                %tmp.81 = getv %tmp.80 :KEY_ESC;
+                putv self :button %tmp.81;
+            }
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 520; @position = 18; @symbol_constdef = [button,520,18,24]; ]
+            const button;
+        }
+        [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 523; @symbol_moduledef = [system_icon_light__revert,523,15,40]; ]
+        module system_icon_light__revert {
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 523; ]
+            <init> {
+            }
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 524; @position = 18; @symbol_constdef = [filename,524,18,26]; @symbol_type<0> = [String,524,30,36]; ]
+            const filename as String = "/Users/andy/Library/Application Support/Garmin/ConnectIQ/Devices/edge840/system_icon_light__revert.svg";
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 525; @position = 18; @symbol_constdef = [disableTransparency,525,18,37]; @symbol_type<0> = [Boolean,525,41,48]; ]
+            const disableTransparency as Boolean = true;
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 526; @position = 18; @symbol_constdef = [dithering,526,18,27]; @symbol_type<0> = [String,526,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 527; @position = 18; @symbol_constdef = [automaticPalette,527,18,34]; @symbol_type<0> = [Boolean,527,38,45]; ]
+            const automaticPalette as Boolean = true;
+        }
+        [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 530; @symbol_moduledef = [system_size__subwindow,530,15,37]; ]
+        module system_size__subwindow {
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 530; ]
+            <init> {
+            }
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 531; @position = 18; @symbol_constdef = [exclude,531,18,25]; @symbol_type<0> = [Boolean,531,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 534; @symbol_moduledef = [system_icon_positive__hint_button_left_bottom,534,15,60]; ]
+        module system_icon_positive__hint_button_left_bottom {
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 534; ]
+            <init> {
+            }
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 535; @position = 18; @symbol_constdef = [exclude,535,18,25]; @symbol_type<0> = [Boolean,535,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 538; @symbol_moduledef = [system_icon_dark__check,538,15,38]; ]
+        module system_icon_dark__check {
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 538; ]
+            <init> {
+            }
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 539; @position = 18; @symbol_constdef = [filename,539,18,26]; @symbol_type<0> = [String,539,30,36]; ]
+            const filename as String = "/Users/andy/Library/Application Support/Garmin/ConnectIQ/Devices/edge840/system_icon_dark__check.svg";
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 540; @position = 18; @symbol_constdef = [disableTransparency,540,18,37]; @symbol_type<0> = [Boolean,540,41,48]; ]
+            const disableTransparency as Boolean = true;
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 541; @position = 18; @symbol_constdef = [dithering,541,18,27]; @symbol_type<0> = [String,541,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 542; @position = 18; @symbol_constdef = [automaticPalette,542,18,34]; @symbol_type<0> = [Boolean,542,38,45]; ]
+            const automaticPalette as Boolean = true;
+        }
+        [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 545; @symbol_moduledef = [confirmation_loc__hint_keep,545,15,42]; ]
+        module confirmation_loc__hint_keep {
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 545; ]
+            <init> {
+            }
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 546; @position = 18; @symbol_constdef = [x,546,18,19]; @symbol_type<0> = [Number,546,23,29]; ]
+            const x as Number = 195;
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 547; @position = 18; @symbol_constdef = [y,547,18,19]; @symbol_type<0> = [Number,547,23,29]; ]
+            const y as Number = 30;
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 548; @position = 18; @symbol_constdef = [horizontalJustification,548,18,41]; @symbol_type<0> = [String,548,45,51]; ]
+            const horizontalJustification as String = "center";
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 549; @position = 18; @symbol_constdef = [verticalJustification,549,18,39]; @symbol_type<0> = [String,549,43,49]; ]
+            const verticalJustification as String = "center";
+        }
+        [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 552; @symbol_moduledef = [confirmation_loc__hint_delete,552,15,44]; ]
+        module confirmation_loc__hint_delete {
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 552; ]
+            <init> {
+            }
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 553; @position = 18; @symbol_constdef = [x,553,18,19]; @symbol_type<0> = [Number,553,23,29]; ]
+            const x as Number = 195;
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 554; @position = 18; @symbol_constdef = [y,554,18,19]; @symbol_type<0> = [Number,554,23,29]; ]
+            const y as Number = 249;
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 555; @position = 18; @symbol_constdef = [horizontalJustification,555,18,41]; @symbol_type<0> = [String,555,45,51]; ]
+            const horizontalJustification as String = "center";
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 556; @position = 18; @symbol_constdef = [verticalJustification,556,18,39]; @symbol_type<0> = [String,556,43,49]; ]
+            const verticalJustification as String = "center";
+        }
+        [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 559; @symbol_moduledef = [system_icon_positive__hint_action_menu,559,15,53]; ]
+        module system_icon_positive__hint_action_menu {
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 559; ]
+            <init> {
+            }
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 560; @position = 18; @symbol_constdef = [exclude,560,18,25]; @symbol_type<0> = [Boolean,560,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 563; @symbol_moduledef = [system_icon_positive__hint_button_right_middle,563,15,61]; ]
+        module system_icon_positive__hint_button_right_middle {
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 563; ]
+            <init> {
+            }
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 564; @position = 18; @symbol_constdef = [exclude,564,18,25]; @symbol_type<0> = [Boolean,564,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 567; @symbol_moduledef = [system_icon_light__hint_button_left_middle,567,15,57]; ]
+        module system_icon_light__hint_button_left_middle {
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 567; ]
+            <init> {
+            }
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 568; @position = 18; @symbol_constdef = [exclude,568,18,25]; @symbol_type<0> = [Boolean,568,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 571; @symbol_moduledef = [system_icon_dark__hint_button_right_bottom,571,15,57]; ]
+        module system_icon_dark__hint_button_right_bottom {
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 571; ]
+            <init> {
+            }
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 572; @position = 18; @symbol_constdef = [exclude,572,18,25]; @symbol_type<0> = [Boolean,572,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 575; @symbol_moduledef = [system_icon_positive__hint_button_right_bottom,575,15,61]; ]
+        module system_icon_positive__hint_button_right_bottom {
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 575; ]
+            <init> {
+            }
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 576; @position = 18; @symbol_constdef = [exclude,576,18,25]; @symbol_type<0> = [Boolean,576,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 579; @symbol_moduledef = [system_icon_dark__revert,579,15,39]; ]
+        module system_icon_dark__revert {
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 579; ]
+            <init> {
+            }
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 580; @position = 18; @symbol_constdef = [filename,580,18,26]; @symbol_type<0> = [String,580,30,36]; ]
+            const filename as String = "/Users/andy/Library/Application Support/Garmin/ConnectIQ/Devices/edge840/system_icon_dark__revert.svg";
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 581; @position = 18; @symbol_constdef = [disableTransparency,581,18,37]; @symbol_type<0> = [Boolean,581,41,48]; ]
+            const disableTransparency as Boolean = true;
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 582; @position = 18; @symbol_constdef = [dithering,582,18,27]; @symbol_type<0> = [String,582,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 583; @position = 18; @symbol_constdef = [automaticPalette,583,18,34]; @symbol_type<0> = [Boolean,583,38,45]; ]
+            const automaticPalette as Boolean = true;
+        }
+        [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 586; @symbol_moduledef = [confirmation_icon_light__hint_delete,586,15,51]; ]
+        module confirmation_icon_light__hint_delete {
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 586; ]
+            <init> {
+            }
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 587; @position = 18; @symbol_constdef = [filename,587,18,26]; @symbol_type<0> = [String,587,30,36]; ]
+            const filename as String = "/Users/andy/Library/Application Support/Garmin/ConnectIQ/Devices/edge840/confirmation_icon__hint_back.svg";
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 588; @position = 18; @symbol_constdef = [disableTransparency,588,18,37]; @symbol_type<0> = [Boolean,588,41,48]; ]
+            const disableTransparency as Boolean = true;
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 589; @position = 18; @symbol_constdef = [dithering,589,18,27]; @symbol_type<0> = [String,589,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 590; @position = 18; @symbol_constdef = [automaticPalette,590,18,34]; @symbol_type<0> = [Boolean,590,38,45]; ]
+            const automaticPalette as Boolean = true;
+        }
+        [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 593; @symbol_moduledef = [system_icon_dark__question,593,15,41]; ]
+        module system_icon_dark__question {
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 593; ]
+            <init> {
+            }
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 594; @position = 18; @symbol_constdef = [filename,594,18,26]; @symbol_type<0> = [String,594,30,36]; ]
+            const filename as String = "/Users/andy/Library/Application Support/Garmin/ConnectIQ/Devices/edge840/system_icon_dark__question.svg";
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 595; @position = 18; @symbol_constdef = [disableTransparency,595,18,37]; @symbol_type<0> = [Boolean,595,41,48]; ]
+            const disableTransparency as Boolean = true;
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 596; @position = 18; @symbol_constdef = [dithering,596,18,27]; @symbol_type<0> = [String,596,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 597; @position = 18; @symbol_constdef = [automaticPalette,597,18,34]; @symbol_type<0> = [Boolean,597,38,45]; ]
+            const automaticPalette as Boolean = true;
+        }
+        [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 600; @symbol_moduledef = [system_icon_light__discard,600,15,41]; ]
+        module system_icon_light__discard {
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 600; ]
+            <init> {
+            }
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 601; @position = 18; @symbol_constdef = [filename,601,18,26]; @symbol_type<0> = [String,601,30,36]; ]
+            const filename as String = "/Users/andy/Library/Application Support/Garmin/ConnectIQ/Devices/edge840/system_icon_light__discard.svg";
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 602; @position = 18; @symbol_constdef = [disableTransparency,602,18,37]; @symbol_type<0> = [Boolean,602,41,48]; ]
+            const disableTransparency as Boolean = true;
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 603; @position = 18; @symbol_constdef = [dithering,603,18,27]; @symbol_type<0> = [String,603,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 604; @position = 18; @symbol_constdef = [automaticPalette,604,18,34]; @symbol_type<0> = [Boolean,604,38,45]; ]
+            const automaticPalette as Boolean = true;
+        }
+        [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 607; @symbol_moduledef = [device_info,607,15,26]; ]
+        module device_info {
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 607; ]
+            <init> {
+[ "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen" 609 18 ]
+                symbol [ Toybox %tmp.83 609 32 38 ];
+                %tmp.83 = getv ? :Toybox;
+                symbol [ System %tmp.84 609 39 45 ];
+                %tmp.84 = getv %tmp.83 :System;
+                symbol [ SCREEN_SHAPE_RECTANGLE %tmp.85 609 46 68 ];
+                %tmp.85 = getv %tmp.84 :SCREEN_SHAPE_RECTANGLE;
+                putv self :screenShape %tmp.85;
+            }
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 608; @position = 18; @symbol_constdef = [screenWidth,608,18,29]; @symbol_type<0> = [Number,608,33,39]; ]
+            const screenWidth as Number = 246;
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 609; @position = 18; @symbol_constdef = [screenShape,609,18,29]; ]
+            const screenShape;
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 610; @position = 18; @symbol_constdef = [hasNightMode,610,18,30]; @symbol_type<0> = [Boolean,610,34,41]; ]
+            const hasNightMode as Boolean = true;
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 611; @position = 18; @symbol_constdef = [hasGpu,611,18,24]; @symbol_type<0> = [Boolean,611,28,35]; ]
+            const hasGpu as Boolean = false;
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 612; @position = 18; @symbol_constdef = [screenHeight,612,18,30]; @symbol_type<0> = [Number,612,34,40]; ]
+            const screenHeight as Number = 322;
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 613; @position = 18; @symbol_constdef = [hasTouchScreen,613,18,32]; @symbol_type<0> = [Boolean,613,36,43]; ]
+            const hasTouchScreen as Boolean = false;
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 614; @position = 18; @symbol_constdef = [hasEnhancedReadabilityMode,614,18,44]; @symbol_type<0> = [Boolean,614,48,55]; ]
+            const hasEnhancedReadabilityMode as Boolean = false;
+        }
+        [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 617; @symbol_moduledef = [confirmation_icon_dark__hint_confirm,617,15,51]; ]
+        module confirmation_icon_dark__hint_confirm {
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 617; ]
+            <init> {
+            }
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 618; @position = 18; @symbol_constdef = [filename,618,18,26]; @symbol_type<0> = [String,618,30,36]; ]
+            const filename as String = "/Users/andy/Library/Application Support/Garmin/ConnectIQ/Devices/edge840/confirmation_icon__hint_completion.svg";
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 619; @position = 18; @symbol_constdef = [disableTransparency,619,18,37]; @symbol_type<0> = [Boolean,619,41,48]; ]
+            const disableTransparency as Boolean = true;
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 620; @position = 18; @symbol_constdef = [dithering,620,18,27]; @symbol_type<0> = [String,620,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 621; @position = 18; @symbol_constdef = [automaticPalette,621,18,34]; @symbol_type<0> = [Boolean,621,38,45]; ]
+            const automaticPalette as Boolean = true;
+        }
+        [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 624; @symbol_moduledef = [prompt_font__body_no_title,624,15,41]; ]
+        module prompt_font__body_no_title {
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 624; ]
+            <init> {
+[ "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen" 625 18 ]
+                symbol [ Graphics %tmp.86 625 34 42 ];
+                %tmp.86 = getm $.Toybox.Graphics;
+                symbol [ TEXT_JUSTIFY_CENTER %tmp.87 625 43 62 ];
+                %tmp.87 = getv %tmp.86 :TEXT_JUSTIFY_CENTER;
+                symbol [ Graphics %tmp.88 625 63 71 ];
+                %tmp.88 = getm $.Toybox.Graphics;
+                symbol [ TEXT_JUSTIFY_VCENTER %tmp.89 625 72 92 ];
+                %tmp.89 = getv %tmp.88 :TEXT_JUSTIFY_VCENTER;
+                %tmp.90 = bitor %tmp.87 %tmp.89;
+                putv self :justification %tmp.90;
+[ "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen" 626 18 ]
+                symbol [ Graphics %tmp.91 626 25 33 ];
+                %tmp.91 = getm $.Toybox.Graphics;
+                symbol [ FONT_MEDIUM %tmp.92 626 34 45 ];
+                %tmp.92 = getv %tmp.91 :FONT_MEDIUM;
+                putv self :font %tmp.92;
+            }
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 625; @position = 18; @symbol_constdef = [justification,625,18,31]; ]
+            const justification;
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 626; @position = 18; @symbol_constdef = [font,626,18,22]; ]
+            const font;
+        }
+        [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 629; @symbol_moduledef = [prompt_size__title_icon,629,15,38]; ]
+        module prompt_size__title_icon {
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 629; ]
+            <init> {
+            }
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 630; @position = 18; @symbol_constdef = [scaleX,630,18,24]; @symbol_type<0> = [Number,630,28,34]; ]
+            const scaleX as Number = 55;
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 631; @position = 18; @symbol_constdef = [scaleY,631,18,24]; @symbol_type<0> = [Number,631,28,34]; ]
+            const scaleY as Number = 55;
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 632; @position = 18; @symbol_constdef = [scaleRelativeTo,632,18,33]; @symbol_type<0> = [String,632,37,43]; ]
+            const scaleRelativeTo as String = "screen";
+        }
+        [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 635; @symbol_moduledef = [system_icon_dark__warning,635,15,40]; ]
+        module system_icon_dark__warning {
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 635; ]
+            <init> {
+            }
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 636; @position = 18; @symbol_constdef = [filename,636,18,26]; @symbol_type<0> = [String,636,30,36]; ]
+            const filename as String = "/Users/andy/Library/Application Support/Garmin/ConnectIQ/Devices/edge840/system_icon_dark__warning.svg";
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 637; @position = 18; @symbol_constdef = [disableTransparency,637,18,37]; @symbol_type<0> = [Boolean,637,41,48]; ]
+            const disableTransparency as Boolean = true;
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 638; @position = 18; @symbol_constdef = [dithering,638,18,27]; @symbol_type<0> = [String,638,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 639; @position = 18; @symbol_constdef = [automaticPalette,639,18,34]; @symbol_type<0> = [Boolean,639,38,45]; ]
+            const automaticPalette as Boolean = true;
+        }
+        [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 642; @symbol_moduledef = [prompt_loc__title_icon,642,15,37]; ]
+        module prompt_loc__title_icon {
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 642; ]
+            <init> {
+            }
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 643; @position = 18; @symbol_constdef = [x,643,18,19]; @symbol_type<0> = [Number,643,23,29]; ]
+            const x as Number = 123;
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 644; @position = 18; @symbol_constdef = [y,644,18,19]; @symbol_type<0> = [Number,644,23,29]; ]
+            const y as Number = 44;
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 645; @position = 18; @symbol_constdef = [horizontalJustification,645,18,41]; @symbol_type<0> = [String,645,45,51]; ]
+            const horizontalJustification as String = "center";
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 646; @position = 18; @symbol_constdef = [verticalJustification,646,18,39]; @symbol_type<0> = [String,646,43,49]; ]
+            const verticalJustification as String = "center";
+        }
+        [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 649; @symbol_moduledef = [prompt_font_enhanced_readability__title,649,15,54]; ]
+        module prompt_font_enhanced_readability__title {
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 649; ]
+            <init> {
+            }
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 650; @position = 18; @symbol_constdef = [exclude,650,18,25]; @symbol_type<0> = [Boolean,650,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 653; @symbol_moduledef = [prompt_color_dark__body,653,15,38]; ]
+        module prompt_color_dark__body {
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 653; ]
+            <init> {
+[ "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen" 655 18 ]
+                symbol [ Graphics %tmp.93 655 31 39 ];
+                %tmp.93 = getm $.Toybox.Graphics;
+                symbol [ COLOR_TRANSPARENT %tmp.94 655 40 57 ];
+                %tmp.94 = getv %tmp.93 :COLOR_TRANSPARENT;
+                putv self :background %tmp.94;
+            }
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 654; @position = 18; @symbol_constdef = [color,654,18,23]; @symbol_type<0> = [Number,654,27,33]; ]
+            const color as Number = 0xFFFFFF;
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 655; @position = 18; @symbol_constdef = [background,655,18,28]; ]
+            const background;
+        }
+        [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 658; @symbol_moduledef = [confirmation_icon__hint_delete,658,15,45]; ]
+        module confirmation_icon__hint_delete {
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 658; ]
+            <init> {
+            }
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 659; @position = 18; @symbol_constdef = [filename,659,18,26]; @symbol_type<0> = [String,659,30,36]; ]
+            const filename as String = "/Users/andy/Library/Application Support/Garmin/ConnectIQ/Devices/edge840/confirmation_icon__hint_back.svg";
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 660; @position = 18; @symbol_constdef = [disableTransparency,660,18,37]; @symbol_type<0> = [Boolean,660,41,48]; ]
+            const disableTransparency as Boolean = true;
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 661; @position = 18; @symbol_constdef = [dithering,661,18,27]; @symbol_type<0> = [String,661,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 662; @position = 18; @symbol_constdef = [automaticPalette,662,18,34]; @symbol_type<0> = [Boolean,662,38,45]; ]
+            const automaticPalette as Boolean = true;
+        }
+        [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 665; @symbol_moduledef = [system_icon_light__hint_button_right_top,665,15,55]; ]
+        module system_icon_light__hint_button_right_top {
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 665; ]
+            <init> {
+            }
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 666; @position = 18; @symbol_constdef = [exclude,666,18,25]; @symbol_type<0> = [Boolean,666,29,36]; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 669; @symbol_moduledef = [confirmation_size__body,669,15,38]; ]
+        module confirmation_size__body {
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 669; ]
+            <init> {
+            }
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 670; @position = 18; @symbol_constdef = [width,670,18,23]; @symbol_type<0> = [Number,670,27,33]; ]
+            const width as Number = 246;
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 671; @position = 18; @symbol_constdef = [height,671,18,24]; @symbol_type<0> = [Number,671,28,34]; ]
+            const height as Number = 236;
+        }
+        [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 674; @symbol_moduledef = [system_icon_positive__check,674,15,42]; ]
+        module system_icon_positive__check {
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 674; ]
+            <init> {
+            }
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 675; @position = 18; @symbol_constdef = [filename,675,18,26]; @symbol_type<0> = [String,675,30,36]; ]
+            const filename as String = "/Users/andy/Library/Application Support/Garmin/ConnectIQ/Devices/edge840/system_icon_positive__check.svg";
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 676; @position = 18; @symbol_constdef = [disableTransparency,676,18,37]; @symbol_type<0> = [Boolean,676,41,48]; ]
+            const disableTransparency as Boolean = true;
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 677; @position = 18; @symbol_constdef = [dithering,677,18,27]; @symbol_type<0> = [String,677,31,37]; ]
+            const dithering as String = "none";
+            [ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 678; @position = 18; @symbol_constdef = [automaticPalette,678,18,34]; @symbol_type<0> = [Boolean,678,38,45]; ]
+            const automaticPalette as Boolean = true;
+        }
+    }
+}
+[ @file = "/Users/andy/VSCode/GarminTest/TestGarmin/bin/gen/006-B4062-00/source/Rez.mcgen"; @line = 1; ]
+<init> {
+}

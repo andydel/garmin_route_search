@@ -1,0 +1,9 @@
+project.manifest = manifest.xml
+
+# Edge 840 specific settings
+edge840.sourcePath = source
+edge840.resourcePath = resources
+
+# Build settings
+base.sourcePath = source
+base.resourcePath = resources

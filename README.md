@@ -1,13 +1,15 @@
-# TestGarmin - Garmin Connect IQ Widget
+# GarminRouteOrgsaniser - Garmin Connect IQ Application
 
-A simple Connect IQ widget for Garmin Edge cycling computers that displays the current time and provides basic menu functionality.
+An application to run on 
 
 ## Features
 
-- **Time Display**: Shows current time in HH:MM format
-- **Interactive Menu**: Access menu options via START button
-- **Clean Interface**: Simple, readable display optimized for cycling computers
-- **Button Controls**: Full button navigation support
+- **Group in folders**: Allows user s to define folders to store routes in and group them
+- **Search by length of route**: Understads how long the route is and allows search based on routes around that length
+- **Search by amount of elevation**: How much climbing is involved - allows users to search based on climbing
+- **Search by type of rides**: Allows search based on the type of ride such as ravel, Road or Mountain bike etc
+- **Search by location**: Find something close to a given location by reading the route file and understanding the GPS coordingates
+- **Launch a ride**: Starts the navigation featire in Garmin to start the given ride once selected
 
 ## Supported Devices
 
@@ -17,15 +19,15 @@ A simple Connect IQ widget for Garmin Edge cycling computers that displays the c
 ## Requirements
 
 - **Garmin Connect IQ SDK**: Version 8.2.3 or later
-- **Developer Key**: Required for compilation (place in `~/Documents/Garmin/developer_key`)
+- **Developer Key**: Needs to be provided
 - **MonkeyC Compiler**: Included with Connect IQ SDK
 
 ## Building the App
 
 ### Compile for Edge 840:
 ```bash
-export SDK_PATH="/Users/andy/Library/Application Support/Garmin/ConnectIQ/Sdks/connectiq-sdk-mac-8.2.3-2025-08-11-cac5b3b21"
-"${SDK_PATH}/bin/monkeyc" -f monkey.jungle -d edge840 -o bin/TestGarmin.prg -y ~/Documents/Garmin/developer_key
+export SDK_PATH="Garmin/ConnectIQ/Sdks/connectiq-sdk-mac-8.2.3-2025-08-11-cac5b3b21"
+"${SDK_PATH}/bin/monkeyc" -f monkey.jungle -d edge840 -o bin/TestGarmin.prg -y ~[location of key]
 ```
 
 ### Run in Simulator:

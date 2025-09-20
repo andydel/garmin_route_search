@@ -1,6 +1,21 @@
 <strings>
-    <string id="AppName">My Garmin App</string>
-    <string id="MenuItem1">Start Activity</string>
-    <string id="MenuItem2">View Stats</string>
+    <string id="AppName">Route Organiser</string>
+    <string id="BrowseFolders">Browse Folders</string>
+    <string id="SearchRoutes">Search Routes</string>
     <string id="Settings">Settings</string>
+    <string id="AllRoutes">All Routes</string>
+    <string id="SearchByLength">Search by Length</string>
+    <string id="SearchByElevation">Search by Elevation</string>
+    <string id="SearchByType">Search by Type</string>
+    <string id="SearchByLocation">Search by Location</string>
+    <string id="NoRoutes">No routes found</string>
+    <string id="Loading">Loading...</string>
+    <string id="Road">Road</string>
+    <string id="Gravel">Gravel</string>
+    <string id="Mountain">Mountain</string>
+    <string id="Length">Length</string>
+    <string id="Elevation">Elevation</string>
+    <string id="Type">Type</string>
+    <string id="LaunchRoute">Launch Route</string>
+    <string id="RouteDetails">Route Details</string>
 </strings>

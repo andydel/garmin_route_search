@@ -1,5 +1,14 @@
-<menu id="MainMenu">
-    <menu-item id="item_1" label="@Strings.MenuItem1"/>
-    <menu-item id="item_2" label="@Strings.MenuItem2"/>
-    <menu-item id="settings" label="@Strings.Settings"/>
-</menu>
+<menus>
+    <menu id="MainMenu">
+        <menu-item id="browse_folders" label="@Strings.BrowseFolders"/>
+        <menu-item id="search_routes" label="@Strings.SearchRoutes"/>
+        <menu-item id="settings" label="@Strings.Settings"/>
+    </menu>
+
+    <menu id="SearchMenu">
+        <menu-item id="search_length" label="@Strings.SearchByLength"/>
+        <menu-item id="search_elevation" label="@Strings.SearchByElevation"/>
+        <menu-item id="search_type" label="@Strings.SearchByType"/>
+        <menu-item id="search_location" label="@Strings.SearchByLocation"/>
+    </menu>
+</menus>

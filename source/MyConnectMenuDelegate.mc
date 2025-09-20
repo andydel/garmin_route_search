@@ -10,16 +10,19 @@ class MyConnectMenuDelegate extends WatchUi.MenuInputDelegate {
 
     function onMenuItem(item as Lang.Symbol) as Void {
         switch(item) {
-            case :item_1:
-                System.println("Menu Item 1 selected");
+            case :browse_folders:
+                System.println("Browse Folders selected");
+                // TODO: Implement folder browsing view
                 WatchUi.popView(WatchUi.SLIDE_DOWN);
                 break;
-            case :item_2:
-                System.println("Menu Item 2 selected");
-                WatchUi.popView(WatchUi.SLIDE_DOWN);
+            case :search_routes:
+                System.println("Search Routes selected");
+                // Show search submenu
+                WatchUi.pushView(new Rez.Menus.SearchMenu(), new SearchMenuDelegate(), WatchUi.SLIDE_UP);
                 break;
             case :settings:
                 System.println("Settings selected");
+                // TODO: Implement settings view
                 WatchUi.popView(WatchUi.SLIDE_DOWN);
                 break;
         }

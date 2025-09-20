@@ -1,15 +1,15 @@
-# GarminRouteOrgsaniser - Garmin Connect IQ Application
+# Garmin Route Organiser - Connect IQ Application
 
-An application to run on 
+A comprehensive route management application for Garmin Edge cycling computers that helps cyclists organize, search, and launch their saved routes efficiently.
 
 ## Features
 
-- **Group in folders**: Allows user s to define folders to store routes in and group them
-- **Search by length of route**: Understads how long the route is and allows search based on routes around that length
-- **Search by amount of elevation**: How much climbing is involved - allows users to search based on climbing
-- **Search by type of rides**: Allows search based on the type of ride such as ravel, Road or Mountain bike etc
-- **Search by location**: Find something close to a given location by reading the route file and understanding the GPS coordingates
-- **Launch a ride**: Starts the navigation featire in Garmin to start the given ride once selected
+- **Organize in folders**: Create custom folders to group and categorize your routes for easy browsing
+- **Search by length**: Find routes within specific distance ranges to match your planned ride duration
+- **Search by elevation**: Filter routes by climbing difficulty to match your fitness goals and terrain preferences
+- **Search by ride type**: Categorize and find routes by type - Road, Gravel, Mountain bike, etc.
+- **Search by location**: Discover routes near your current location or any specified area using GPS coordinates
+- **Launch navigation**: Seamlessly start Garmin navigation for any selected route with one button press
 
 ## Supported Devices
 
@@ -24,10 +24,14 @@ An application to run on
 
 ## Building the App
 
+**Prerequisites:**
+- Replace `{connectiq_sdk_path}` with your Connect IQ SDK installation path
+- Replace `{developer_key_path}` with the path to your developer key file
+
 ### Compile for Edge 840:
 ```bash
-export SDK_PATH="Garmin/ConnectIQ/Sdks/connectiq-sdk-mac-8.2.3-2025-08-11-cac5b3b21"
-"${SDK_PATH}/bin/monkeyc" -f monkey.jungle -d edge840 -o bin/TestGarmin.prg -y ~[location of key]
+export SDK_PATH="{connectiq_sdk_path}"
+"${SDK_PATH}/bin/monkeyc" -f monkey.jungle -d edge840 -o bin/RouteOrganiser.prg -y {developer_key_path}
 ```
 
 ### Run in Simulator:
@@ -36,58 +40,86 @@ export SDK_PATH="Garmin/ConnectIQ/Sdks/connectiq-sdk-mac-8.2.3-2025-08-11-cac5b3
 "${SDK_PATH}/bin/connectiq" &
 
 # Load app into simulator
-"${SDK_PATH}/bin/monkeydo" bin/TestGarmin.prg edge840
+"${SDK_PATH}/bin/monkeydo" bin/RouteOrganiser.prg edge840
 ```
 
 ## File Structure
 
 ```
-TestGarmin/
-├── source/                    # MonkeyC source files
-│   ├── MyConnectApp.mc       # Main application class
-│   ├── MyConnectView.mc      # UI view and display logic
-│   ├── MyConnectDelegate.mc  # Button input handling
-│   └── MyConnectMenuDelegate.mc # Menu interaction handling
-├── resources/                # Application resources
-│   ├── drawables/           # Icons and images
-│   ├── layouts/             # UI layouts
-│   ├── menus/               # Menu definitions
-│   └── strings/             # Localized strings
-├── bin/                     # Compiled output
-├── manifest.xml             # App metadata and permissions
-└── monkey.jungle            # Build configuration
+RouteOrganiser/
+├── source/                      # MonkeyC source files
+│   ├── MyConnectApp.mc         # Main application class
+│   ├── MyConnectView.mc        # Main route list display
+│   ├── MyConnectDelegate.mc    # Button input handling
+│   ├── MyConnectMenuDelegate.mc # Main menu interaction
+│   ├── SearchMenuDelegate.mc   # Search submenu handling
+│   ├── RouteListView.mc        # Route list component
+│   └── SearchView.mc           # Search interface component
+├── resources/                  # Application resources
+│   ├── drawables/             # Icons and images
+│   ├── layouts/               # UI layouts
+│   ├── menus/                 # Menu definitions (main + search)
+│   └── strings/               # Route management strings
+├── bin/                       # Compiled output
+├── manifest.xml               # App metadata and permissions
+└── monkey.jungle              # Build configuration
 ```
 
 ## Controls
 
-- **START Button**: Open menu
-- **SELECT Button**: Confirm selection (logs to console)
-- **BACK Button**: Exit application or close menu
+- **START Button**: Open main menu from route list
+- **SELECT Button**: View route details or launch selected route
+- **UP/DOWN Buttons**: Navigate through route lists
+- **BACK Button**: Return to previous screen or exit application
 
-## Menu Options
+## Menu Structure
 
-1. **Start Activity**: Placeholder menu item
-2. **View Stats**: Placeholder menu item
-3. **Settings**: Placeholder menu item
+### Main Menu
+1. **Browse Folders**: Navigate through organized route folders
+2. **Search Routes**: Access search options by various criteria
+3. **Settings**: Configure app preferences and folder management
+
+### Search Submenu
+1. **Search by Length**: Find routes within distance ranges (e.g., 10-30km)
+2. **Search by Elevation**: Filter by climbing difficulty (e.g., 500-1000m gain)
+3. **Search by Type**: Filter by route category (Road, Gravel, Mountain)
+4. **Search by Location**: Find routes near current or specified location
 
 ## Permissions
 
 - **Positioning**: Access to GPS location data
 - **UserProfile**: Access to user profile information
 
+## Current Status
+
+**UI Implementation Complete** - The application now features:
+- Complete route organizer interface with mock data
+- Functional menu system and navigation
+- Route list display with mock routes
+- Search interface mockups for all search types
+- Proper menu hierarchy (Main → Search submenu)
+
+**Pending Features** - Backend functionality to be implemented:
+- Actual route file parsing and storage
+- Real search and filtering algorithms
+- Folder management system
+- Integration with Garmin navigation API
+- Route metadata extraction from .fit/.gpx/.tcx files
+
 ## Development Notes
 
 - Built with MonkeyC for Garmin Connect IQ platform
 - Uses proper type annotations for strict compilation
 - Follows Garmin Connect IQ best practices
-- Tested and working in Connect IQ simulator
+- Fully tested UI in Connect IQ simulator
+- Widget type compatible with Edge devices
 
 ## Version
 
-- **Version**: 1.0.0
+- **Version**: 1.0.0 (UI Complete)
 - **Min SDK**: 5.1.0
 - **Language**: English
 
 ## License
 
-This project is a development example for Garmin Connect IQ widgets.
+This project is a route management application for Garmin Connect IQ widgets.

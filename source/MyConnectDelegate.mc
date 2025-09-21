@@ -11,7 +11,7 @@ class MyConnectDelegate extends WatchUi.BehaviorDelegate {
     }
 
     function onMenu() as Lang.Boolean {
-        // START button opens main menu (not folder creation)
+        // START button opens main menu
         WatchUi.pushView(new Rez.Menus.MainMenu(), new MyConnectMenuDelegate(), WatchUi.SLIDE_UP);
         return true;
     }
@@ -55,12 +55,6 @@ class MyConnectDelegate extends WatchUi.BehaviorDelegate {
         return false;
     }
 
-    private function openFolderCreateDialog() as Void {
-        System.println("DEBUG: Opening folder creation dialog");
-        var dialog = new FolderCreateDialog();
-        var dialogDelegate = new FolderCreateDialogDelegate(mView);
-        WatchUi.pushView(dialog, dialogDelegate, WatchUi.SLIDE_UP);
-    }
 
     private function createMockRoutesForFolder(folderName as Lang.String) as Lang.Array {
         // Create mock routes based on folder name

@@ -48,7 +48,7 @@ class MyConnectDelegate extends WatchUi.BehaviorDelegate {
     function onBack() as Lang.Boolean {
         // Exit the application
         System.exit();
-        return true;
+        return false; // This line won't execute but satisfies the compiler
     }
 
     private function createMockRoutesForFolder(folderName as Lang.String) as Lang.Array {

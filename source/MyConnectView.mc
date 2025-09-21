@@ -40,7 +40,7 @@ class MyConnectView extends WatchUi.View {
     }
 
     function onLayout(dc as Graphics.Dc) as Void {
-        setLayout(Rez.Layouts.MainLayout(dc));
+        // Skip layout since we're doing custom drawing in onUpdate
     }
 
     function onShow() as Void {
@@ -152,8 +152,6 @@ class MyConnectView extends WatchUi.View {
             "START: Menu | SELECT: Open | ↑↓: Navigate",
             Graphics.TEXT_JUSTIFY_CENTER
         );
-
-        View.onUpdate(dc);
     }
 
     function onHide() as Void {

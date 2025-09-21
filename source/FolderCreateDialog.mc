@@ -14,7 +14,7 @@ class FolderCreateDialog extends WatchUi.View {
     }
 
     function onLayout(dc as Graphics.Dc) as Void {
-        setLayout(Rez.Layouts.MainLayout(dc));
+        // Skip layout since we're doing custom drawing in onUpdate
     }
 
     function onShow() as Void {

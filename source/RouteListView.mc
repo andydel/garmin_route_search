@@ -16,7 +16,7 @@ class RouteListView extends WatchUi.View {
     }
 
     function onLayout(dc as Graphics.Dc) as Void {
-        setLayout(Rez.Layouts.MainLayout(dc));
+        // Skip layout since we're doing custom drawing in onUpdate
     }
 
     function onShow() as Void {
@@ -131,8 +131,6 @@ class RouteListView extends WatchUi.View {
             "HOME: Back | SELECT: Launch | ↑↓: Navigate",
             Graphics.TEXT_JUSTIFY_CENTER
         );
-
-        View.onUpdate(dc);
     }
 
     function onHide() as Void {

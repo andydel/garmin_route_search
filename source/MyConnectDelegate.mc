@@ -11,16 +11,20 @@ class MyConnectDelegate extends WatchUi.BehaviorDelegate {
     }
 
     function onMenu() as Lang.Boolean {
+        // START button opens main menu (not folder creation)
         WatchUi.pushView(new Rez.Menus.MainMenu(), new MyConnectMenuDelegate(), WatchUi.SLIDE_UP);
         return true;
     }
+
+    // Note: Plus button is visual only on Garmin devices
+    // To create a new folder, user should use the main menu (START button)
+    // and select "Create Folder" option from the menu
 
     function onSelect() as Lang.Boolean {
         // Handle folder selection - open folder contents
         var selectedFolder = mView.getSelectedFolder();
         if (selectedFolder != null) {
             var folderName = selectedFolder.get("name") as Lang.String;
-            System.println("Opening folder: " + folderName);
 
             // Create mock routes for the selected folder
             var mockRoutes = createMockRoutesForFolder(folderName);
@@ -48,7 +52,14 @@ class MyConnectDelegate extends WatchUi.BehaviorDelegate {
     function onBack() as Lang.Boolean {
         // Exit the application
         System.exit();
-        return false; // This line won't execute but satisfies the compiler
+        return false;
+    }
+
+    private function openFolderCreateDialog() as Void {
+        System.println("DEBUG: Opening folder creation dialog");
+        var dialog = new FolderCreateDialog();
+        var dialogDelegate = new FolderCreateDialogDelegate(mView);
+        WatchUi.pushView(dialog, dialogDelegate, WatchUi.SLIDE_UP);
     }
 
     private function createMockRoutesForFolder(folderName as Lang.String) as Lang.Array {

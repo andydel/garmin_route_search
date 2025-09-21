@@ -39,10 +39,10 @@ class RouteListView extends WatchUi.View {
             Graphics.TEXT_JUSTIFY_CENTER
         );
 
-        // Route list
+        // Route list with enhanced spacing for detailed display
         var yStart = 40;
-        var itemHeight = 25;
-        var visibleItems = 6;
+        var itemHeight = 35;
+        var visibleItems = 5;
 
         if (mRoutes.size() == 0) {
             dc.setColor(Graphics.COLOR_LT_GRAY, Graphics.COLOR_TRANSPARENT);
@@ -66,17 +66,52 @@ class RouteListView extends WatchUi.View {
                     dc.setColor(Graphics.COLOR_LT_GRAY, Graphics.COLOR_TRANSPARENT);
                 }
 
-                // Route name and details
+                // Enhanced route display with detailed information
                 var route = mRoutes[i] as Lang.Dictionary;
-                var routeText = route.get("name") + " - " + route.get("distance") + "km";
 
+                // Route name (primary text) - larger font for readability
                 dc.drawText(
                     10,
                     yPos,
-                    Graphics.FONT_XTINY,
-                    routeText,
+                    Graphics.FONT_SMALL,
+                    route.get("name") as Lang.String,
                     Graphics.TEXT_JUSTIFY_LEFT
                 );
+
+                // Distance, elevation, and type (secondary info)
+                var distance = route.get("distance") as Lang.Float;
+                var elevation = route.get("elevation") as Lang.Number;
+                var routeType = route.get("type") as Lang.String;
+                var details = distance.format("%.1f") + "km • " +
+                             elevation + "m • " + routeType;
+
+                // Adjust text color for selected vs unselected
+                if (i == mSelectedIndex) {
+                    dc.setColor(Graphics.COLOR_LT_GRAY, Graphics.COLOR_TRANSPARENT);
+                } else {
+                    dc.setColor(Graphics.COLOR_DK_GRAY, Graphics.COLOR_TRANSPARENT);
+                }
+
+                dc.drawText(
+                    10,
+                    yPos + 15,
+                    Graphics.FONT_XTINY,
+                    details,
+                    Graphics.TEXT_JUSTIFY_LEFT
+                );
+
+                // Route type indicator (visual marker)
+                var typeColor = Graphics.COLOR_LT_GRAY;
+                if (routeType.equals("Mountain")) {
+                    typeColor = Graphics.COLOR_RED;
+                } else if (routeType.equals("Gravel")) {
+                    typeColor = Graphics.COLOR_ORANGE;
+                } else if (routeType.equals("Road")) {
+                    typeColor = Graphics.COLOR_GREEN;
+                }
+
+                dc.setColor(typeColor, typeColor);
+                dc.fillRectangle(dc.getWidth() - 15, yPos + 5, 8, 8);
             }
         }
 

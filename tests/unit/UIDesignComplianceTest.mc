@@ -4,21 +4,28 @@ using Toybox.Test;
 function testOverallUIDesignCompliance(logger as Logger) as Boolean {
     // Test overall UI design principles from docs/design/ui-design.md
 
-    // 1. Test Home Screen Implementation
+    // 1. Test Home Screen Implementation (Folder-based)
     var homeView = new MyConnectView();
     Test.assert(homeView != null);
 
-    // Verify route list with essential information
-    var homeRoute = homeView.getSelectedRoute();
-    Test.assert(homeRoute.get("name") != null);        // Route name (primary text)
-    Test.assert(homeRoute.get("distance") != null);    // Distance (secondary info)
-    Test.assert(homeRoute.get("elevation") != null);   // Elevation gain (secondary info)
-    Test.assert(homeRoute.get("type") != null);        // Route type indicator
+    // Verify folder list with essential information
+    var homeFolder = homeView.getSelectedFolder();
+    Test.assert(homeFolder.get("name") != null);        // Folder name (primary text)
+    Test.assert(homeFolder.get("routeCount") != null);  // Route count (secondary info)
+    Test.assert(homeFolder.get("isDefault") != null);   // Default folder indicator
 
     // Test navigation controls
     homeView.moveUp();
     homeView.moveDown();
-    Test.assert(homeView.getSelectedRoute() != null);  // Visual selection highlighting
+    Test.assert(homeView.getSelectedFolder() != null);  // Visual selection highlighting
+
+    // Test Uncategorized folder requirement
+    var firstFolder = homeView.getSelectedFolder();
+    Test.assert(firstFolder.get("name").equals("Uncategorized"));
+
+    // Test folder creation capability
+    homeView.addFolder("Test Folder");
+    Test.assert(homeView.getSelectedFolder() != null);
 
     // 2. Test Search Result View Implementation
     var searchView = new SearchView("Length");

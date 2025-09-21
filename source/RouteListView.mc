@@ -30,7 +30,14 @@ class RouteListView extends WatchUi.View {
         // Set text color and font
         dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_TRANSPARENT);
 
-        // Title
+        // Home button (top left)
+        dc.setColor(Graphics.COLOR_BLUE, Graphics.COLOR_BLUE);
+        dc.fillRectangle(10, 10, 20, 15);
+        dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_TRANSPARENT);
+        dc.drawText(20, 11, Graphics.FONT_TINY, "🏠", Graphics.TEXT_JUSTIFY_CENTER);
+
+        // Folder title (centered)
+        dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_TRANSPARENT);
         dc.drawText(
             dc.getWidth() / 2,
             10,
@@ -121,7 +128,7 @@ class RouteListView extends WatchUi.View {
             dc.getWidth() / 2,
             dc.getHeight() - 25,
             Graphics.FONT_TINY,
-            "UP/DOWN: Navigate | SELECT: Launch",
+            "HOME: Back | SELECT: Launch | ↑↓: Navigate",
             Graphics.TEXT_JUSTIFY_CENTER
         );
 
@@ -150,5 +157,11 @@ class RouteListView extends WatchUi.View {
             return mRoutes[mSelectedIndex] as Lang.Dictionary;
         }
         return null;
+    }
+
+    function onHomeButton() as Void {
+        // Navigate back to folder list (home screen)
+        // This would be handled by the delegate
+        System.println("Home button pressed - navigating back to folder list");
     }
 }

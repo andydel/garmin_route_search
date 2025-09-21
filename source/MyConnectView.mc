@@ -5,41 +5,36 @@ using Toybox.Lang;
 
 class MyConnectView extends WatchUi.View {
     private var mSelectedIndex as Lang.Number;
-    private var mRoutes as Lang.Array;
+    private var mFolders as Lang.Array;
 
     function initialize() {
         View.initialize();
         mSelectedIndex = 0;
-        mRoutes = [
+        mFolders = [
             {
-                "name" => "Morning Loop",
-                "distance" => 25.3,
-                "elevation" => 456,
-                "type" => "Road"
+                "name" => "Uncategorized",
+                "routeCount" => 12,
+                "isDefault" => true
             },
             {
-                "name" => "Hill Climb Challenge",
-                "distance" => 15.8,
-                "elevation" => 892,
-                "type" => "Mountain"
+                "name" => "Training Routes",
+                "routeCount" => 8,
+                "isDefault" => false
             },
             {
-                "name" => "Coastal Ride",
-                "distance" => 42.1,
-                "elevation" => 234,
-                "type" => "Road"
+                "name" => "Weekend Adventures",
+                "routeCount" => 5,
+                "isDefault" => false
             },
             {
-                "name" => "Gravel Explorer",
-                "distance" => 18.7,
-                "elevation" => 567,
-                "type" => "Gravel"
+                "name" => "Commute Routes",
+                "routeCount" => 3,
+                "isDefault" => false
             },
             {
-                "name" => "City Circuit",
-                "distance" => 12.4,
-                "elevation" => 89,
-                "type" => "Road"
+                "name" => "Race Courses",
+                "routeCount" => 7,
+                "isDefault" => false
             }
         ];
     }
@@ -66,21 +61,34 @@ class MyConnectView extends WatchUi.View {
             Graphics.TEXT_JUSTIFY_CENTER
         );
 
-        // Route list section header
+        // Search box area
         var yPos = 45;
+        dc.setColor(Graphics.COLOR_DK_GRAY, Graphics.COLOR_DK_GRAY);
+        dc.fillRectangle(10, yPos, dc.getWidth() - 20, 20);
         dc.setColor(Graphics.COLOR_LT_GRAY, Graphics.COLOR_TRANSPARENT);
-        dc.drawText(10, yPos, Graphics.FONT_TINY, "Recent Routes:", Graphics.TEXT_JUSTIFY_LEFT);
+        dc.drawText(15, yPos + 3, Graphics.FONT_TINY, "Search routes...", Graphics.TEXT_JUSTIFY_LEFT);
 
-        // Route list display with enhanced information
-        yPos = 65;
-        var itemHeight = 35;
+        // Plus button for folder creation (top right)
+        dc.setColor(Graphics.COLOR_GREEN, Graphics.COLOR_GREEN);
+        dc.fillRectangle(dc.getWidth() - 25, 10, 15, 15);
+        dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_TRANSPARENT);
+        dc.drawText(dc.getWidth() - 17, 11, Graphics.FONT_TINY, "+", Graphics.TEXT_JUSTIFY_CENTER);
+
+        // Folder list section header
+        yPos = 75;
+        dc.setColor(Graphics.COLOR_LT_GRAY, Graphics.COLOR_TRANSPARENT);
+        dc.drawText(10, yPos, Graphics.FONT_TINY, "Folders:", Graphics.TEXT_JUSTIFY_LEFT);
+
+        // Folder list display
+        yPos = 95;
+        var itemHeight = 30;
         var visibleItems = 4;
 
-        for (var i = 0; i < mRoutes.size() && i < visibleItems; i++) {
-            var route = mRoutes[i] as Lang.Dictionary;
+        for (var i = 0; i < mFolders.size() && i < visibleItems; i++) {
+            var folder = mFolders[i] as Lang.Dictionary;
             var currentY = yPos + (i * itemHeight);
 
-            // Highlight selected route with visual selection
+            // Highlight selected folder with visual selection
             if (i == mSelectedIndex) {
                 dc.setColor(Graphics.COLOR_DK_GRAY, Graphics.COLOR_DK_GRAY);
                 dc.fillRectangle(5, currentY - 3, dc.getWidth() - 10, itemHeight - 2);
@@ -89,21 +97,18 @@ class MyConnectView extends WatchUi.View {
                 dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_TRANSPARENT);
             }
 
-            // Route name (primary text) - larger font for readability
+            // Folder name (primary text) - larger font for readability
             dc.drawText(
                 10,
                 currentY,
                 Graphics.FONT_SMALL,
-                route.get("name") as Lang.String,
+                folder.get("name") as Lang.String,
                 Graphics.TEXT_JUSTIFY_LEFT
             );
 
-            // Distance and elevation gain (secondary info)
-            var distance = route.get("distance") as Lang.Float;
-            var elevation = route.get("elevation") as Lang.Number;
-            var routeType = route.get("type") as Lang.String;
-            var details = distance.format("%.1f") + "km • " +
-                         elevation + "m • " + routeType;
+            // Route count (secondary info)
+            var routeCount = folder.get("routeCount") as Lang.Number;
+            var countText = routeCount + " routes";
 
             if (i == mSelectedIndex) {
                 dc.setColor(Graphics.COLOR_LT_GRAY, Graphics.COLOR_TRANSPARENT);
@@ -115,29 +120,23 @@ class MyConnectView extends WatchUi.View {
                 10,
                 currentY + 15,
                 Graphics.FONT_XTINY,
-                details,
+                countText,
                 Graphics.TEXT_JUSTIFY_LEFT
             );
 
-            // Route type indicator (visual marker)
-            var typeColor = Graphics.COLOR_LT_GRAY;
-            if (routeType.equals("Mountain")) {
-                typeColor = Graphics.COLOR_RED;
-            } else if (routeType.equals("Gravel")) {
-                typeColor = Graphics.COLOR_ORANGE;
-            } else {
-                typeColor = Graphics.COLOR_GREEN;
-            }
+            // Folder indicator (visual marker)
+            var isDefault = folder.get("isDefault") as Lang.Boolean;
+            var folderColor = isDefault ? Graphics.COLOR_BLUE : Graphics.COLOR_YELLOW;
 
-            dc.setColor(typeColor, typeColor);
+            dc.setColor(folderColor, folderColor);
             dc.fillRectangle(dc.getWidth() - 15, currentY + 5, 8, 8);
         }
 
         // Navigation breadcrumbs and status
         dc.setColor(Graphics.COLOR_LT_GRAY, Graphics.COLOR_TRANSPARENT);
-        var statusText = (mSelectedIndex + 1) + "/" + mRoutes.size();
+        var statusText = (mSelectedIndex + 1) + "/" + mFolders.size();
         dc.drawText(
-            dc.getWidth() - 10,
+            dc.getWidth() - 35,
             10,
             Graphics.FONT_TINY,
             statusText,
@@ -150,7 +149,7 @@ class MyConnectView extends WatchUi.View {
             dc.getWidth() / 2,
             dc.getHeight() - 25,
             Graphics.FONT_TINY,
-            "START: Menu | SELECT: Launch | ↑↓: Navigate",
+            "START: Menu | SELECT: Open | ↑↓: Navigate",
             Graphics.TEXT_JUSTIFY_CENTER
         );
 
@@ -168,16 +167,26 @@ class MyConnectView extends WatchUi.View {
     }
 
     function moveDown() as Void {
-        if (mSelectedIndex < mRoutes.size() - 1) {
+        if (mSelectedIndex < mFolders.size() - 1) {
             mSelectedIndex++;
             WatchUi.requestUpdate();
         }
     }
 
-    function getSelectedRoute() as Lang.Dictionary? {
-        if (mRoutes.size() > 0 && mSelectedIndex < mRoutes.size()) {
-            return mRoutes[mSelectedIndex] as Lang.Dictionary;
+    function getSelectedFolder() as Lang.Dictionary? {
+        if (mFolders.size() > 0 && mSelectedIndex < mFolders.size()) {
+            return mFolders[mSelectedIndex] as Lang.Dictionary;
         }
         return null;
+    }
+
+    function addFolder(folderName as Lang.String) as Void {
+        var newFolder = {
+            "name" => folderName,
+            "routeCount" => 0,
+            "isDefault" => false
+        };
+        mFolders.add(newFolder);
+        WatchUi.requestUpdate();
     }
 }

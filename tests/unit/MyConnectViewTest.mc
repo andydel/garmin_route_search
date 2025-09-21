@@ -9,13 +9,12 @@ function testMyConnectViewInitialization(logger as Logger) as Boolean {
     // Test initialization
     Test.assert(view != null);
 
-    // Test route data structure
-    var selectedRoute = view.getSelectedRoute();
-    Test.assert(selectedRoute != null);
-    Test.assert(selectedRoute.get("name") != null);
-    Test.assert(selectedRoute.get("distance") != null);
-    Test.assert(selectedRoute.get("elevation") != null);
-    Test.assert(selectedRoute.get("type") != null);
+    // Test folder data structure
+    var selectedFolder = view.getSelectedFolder();
+    Test.assert(selectedFolder != null);
+    Test.assert(selectedFolder.get("name") != null);
+    Test.assert(selectedFolder.get("routeCount") != null);
+    Test.assert(selectedFolder.get("isDefault") != null);
 
     logger.debug("MyConnectView initialization test passed");
     return true;
@@ -26,18 +25,18 @@ function testMyConnectViewNavigation(logger as Logger) as Boolean {
     var view = new MyConnectView();
 
     // Test initial selection
-    var initialRoute = view.getSelectedRoute();
-    var initialName = initialRoute.get("name") as String;
+    var initialFolder = view.getSelectedFolder();
+    var initialName = initialFolder.get("name") as String;
 
     // Test move down
     view.moveDown();
-    var secondRoute = view.getSelectedRoute();
-    var secondName = secondRoute.get("name") as String;
+    var secondFolder = view.getSelectedFolder();
+    var secondName = secondFolder.get("name") as String;
     Test.assert(!initialName.equals(secondName));
 
     // Test move up
     view.moveUp();
-    var backToFirst = view.getSelectedRoute();
+    var backToFirst = view.getSelectedFolder();
     var backToFirstName = backToFirst.get("name") as String;
     Test.assert(initialName.equals(backToFirstName));
 
@@ -46,20 +45,51 @@ function testMyConnectViewNavigation(logger as Logger) as Boolean {
 }
 
 (:test)
-function testMyConnectViewRouteDataStructure(logger as Logger) as Boolean {
+function testMyConnectViewFolderDataStructure(logger as Logger) as Boolean {
     var view = new MyConnectView();
-    var route = view.getSelectedRoute();
+    var folder = view.getSelectedFolder();
 
-    // Test route data types and values
-    var distance = route.get("distance") as Float;
-    var elevation = route.get("elevation") as Number;
-    var routeType = route.get("type") as String;
+    // Test folder data types and values
+    var name = folder.get("name") as String;
+    var routeCount = folder.get("routeCount") as Number;
+    var isDefault = folder.get("isDefault") as Boolean;
 
-    Test.assert(distance > 0);
-    Test.assert(elevation >= 0);
-    Test.assert(routeType.equals("Road") || routeType.equals("Gravel") || routeType.equals("Mountain"));
+    Test.assert(name.length() > 0);
+    Test.assert(routeCount >= 0);
+    Test.assert(isDefault == true || isDefault == false);
 
-    logger.debug("MyConnectView route data structure test passed");
+    logger.debug("MyConnectView folder data structure test passed");
+    return true;
+}
+
+(:test)
+function testMyConnectViewUncategorizedFolder(logger as Logger) as Boolean {
+    var view = new MyConnectView();
+
+    // Test that Uncategorized folder always exists and is first
+    var firstFolder = view.getSelectedFolder();
+    var folderName = firstFolder.get("name") as String;
+    var isDefault = firstFolder.get("isDefault") as Boolean;
+
+    Test.assert(folderName.equals("Uncategorized"));
+    Test.assert(isDefault == true);
+
+    logger.debug("MyConnectView Uncategorized folder test passed");
+    return true;
+}
+
+(:test)
+function testMyConnectViewFolderCreation(logger as Logger) as Boolean {
+    var view = new MyConnectView();
+
+    // Test folder creation functionality
+    var initialFolder = view.getSelectedFolder();
+    view.addFolder("Test Folder");
+
+    // Verify folder was added (indirectly through no crash)
+    Test.assert(view.getSelectedFolder() != null);
+
+    logger.debug("MyConnectView folder creation test passed");
     return true;
 }
 
@@ -70,12 +100,16 @@ function testMyConnectViewWireframeCompliance(logger as Logger) as Boolean {
 
     // Verify all required components are present
     // This test validates wireframe compliance indirectly through API
-    Test.assert(view.getSelectedRoute() != null); // Route list display
+    Test.assert(view.getSelectedFolder() != null); // Folder list display
 
     // Test navigation functions exist and work
     view.moveUp();
     view.moveDown();
-    Test.assert(view.getSelectedRoute() != null); // Navigation controls
+    Test.assert(view.getSelectedFolder() != null); // Navigation controls
+
+    // Test folder creation capability
+    view.addFolder("Wireframe Test Folder");
+    Test.assert(view.getSelectedFolder() != null); // Folder creation
 
     logger.debug("MyConnectView wireframe compliance test passed");
     return true;

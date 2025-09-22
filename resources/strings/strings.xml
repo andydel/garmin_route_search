@@ -3,6 +3,7 @@
     <string id="BrowseFolders">Browse Folders</string>
     <string id="SearchRoutes">Search Routes</string>
     <string id="Settings">Settings</string>
+    <string id="CreateFolder">Create Folder</string>
     <string id="AllRoutes">All Routes</string>
     <string id="SearchByLength">Search by Length</string>
     <string id="SearchByElevation">Search by Elevation</string>

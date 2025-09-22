@@ -14,9 +14,10 @@ The home screen serves as the primary entry point and route browsing interface.
 
 **Key Elements:**
 - **Header**: Application title "Route Organiser"
-- **Route List**: Scrollable list of available routes with essential information
+- **Folder List**: Scrollable list of folders
 - **Navigation Controls**: Button mappings for quick access to main functions
-- **Status Indicators**: Current selection highlight and navigation breadcrumbs
+- **Search box**: Allows users to do a simple text search on routes
+- **Plus button on top right** - this will allow users to add a new folder.  When clicking it a dialogue will pop up and ask for a folder name, it will have two buttons Create and Cancel.
 
 **Route List Display:**
 - Route name (primary text)

@@ -18,7 +18,9 @@ class MyConnectApp extends Application.AppBase {
 
     // Return the initial view of your application here
     function getInitialView() {
-        return [ new MyConnectView(), new MyConnectDelegate() ];
+        var view = new MyConnectView();
+        var delegate = new MyConnectDelegate(view);
+        return [ view, delegate ];
     }
 }
 

@@ -1,0 +1,33 @@
+# Garmin Connect IQ Build Artifacts
+bin/
+*.prg
+*.prg.debug.xml
+*.mir
+*.mcgen
+*.mbc
+
+# IDE and Editor Settings
+.claude/settings.local.json
+.vscode/settings.json
+.idea/
+*.swp
+*.swo
+*~
+
+# OS Generated Files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Temporary Files
+tmp/
+temp/
+*.tmp
+*.temp
+
+# Logs
+*.log

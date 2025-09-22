@@ -51,11 +51,15 @@ class MyConnectDelegate extends WatchUi.BehaviorDelegate {
 
     function onBack() as Lang.Boolean {
         // Exit the application
-        System.exit();
+        System.println("Back on Home screen - exiting app");
         return false;
     }
 
-
+    function onStart() as Lang.Boolean {
+        // Handle START button - open main menu
+        WatchUi.pushView(new Rez.Menus.MainMenu(), new MyConnectMenuDelegate(), WatchUi.SLIDE_UP);
+        return true;
+    }
     private function createMockRoutesForFolder(folderName as Lang.String) as Lang.Array {
         // Create mock routes based on folder name
         if (folderName.equals("Uncategorized")) {

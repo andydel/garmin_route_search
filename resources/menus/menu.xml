@@ -1,9 +1,7 @@
 <menus>
     <menu id="MainMenu">
-        <menu-item id="browse_folders" label="@Strings.BrowseFolders"/>
         <menu-item id="search_routes" label="@Strings.SearchRoutes"/>
         <menu-item id="create_folder" label="@Strings.CreateFolder"/>
-        <menu-item id="settings" label="@Strings.Settings"/>
     </menu>
 
     <menu id="SearchMenu">
